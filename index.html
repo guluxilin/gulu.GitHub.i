@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+<title>咕噜咕噜的影视星球</title>
+<link rel="stylesheet" type="text/css" href="normalize.css">
+<link rel="stylesheet" type="text/css" href="css1.css">
+<link rel="stylesheet" type="text/css" href="css2.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Sofia;
+  padding: 10px;
+  background-image:url('src/background1.jpg');
+	background-repeat:repeat-x;
+}
+
+
+/* 页眉/Blog 标题 */
+.header {
+  padding: 30px;
+  text-align: center;
+  
+}
+/* 设置上导航栏的样式 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* 设置 topnav 链接的样式 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 150px;
+  text-decoration: none;
+}
+
+/* 改变鼠标悬停时的颜色 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 创建两个不相等的彼此并排的浮动列 */
+/* 左列 */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  
+}
+
+/* 右列 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+ 
+  padding-left: 20px;
+  padding-right: 80px;
+  
+}
+
+/* 伪图像 */
+.fakeimg {
+  background-color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* 为文章添加卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border: 5px solid #ccc;
+}
+
+/* 清除列之后的浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 页脚 */
+.footer {
+  padding: 5px;
+  text-align: center;
+  background: #f1f1f1;
+  margin-top: 20px;
+}
+ul {
+  background: #f1f1f1;
+  padding: 20px;
+}
+ul li {
+ 
+  margin: 5px;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 20%;
+  height: 80%;
+
+}
+div.gallery img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+div.desc {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+/*粘性定位*/
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+div.fixed {
+  position: fixed;
+  bottom: 50%;
+  right: 0;
+  width: 30px;
+  height: 100px;
+  background-color: #f1f1f1;
+  border: 5px solid #ddd;
+  text-align: center;
+}
+/* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 400 像素时，使导航链接堆叠而不是并排 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+  <div class="sticky">
+    <form action="detailpage.html">
+      <input type="text" id="name"  placeholder="搜索内容...">
+    </form>
+  </div>
+
+  <div class="fixed">
+    联系客服
+    </div>
+
+<div class="header">
+  <h1>首页</h1>
+  
+</div>
+
+<div class="topnav">
+  <a href="listpage.html">电影</a>
+  <a href="listpage.html">电视剧</a>
+  <a href="listpage.html">关于网站</a>
+  <a href="formpage.html" >搜索</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>影视推荐</h2>   
+      <div class="fakeimg" style="height:250px;background-color:#f1f1f1;">
+        <div class="gallery">
+          <a  href="detailpage.html">
+          <img src="src/main1.jpeg" alt="#" >  
+          </a>
+          <div class="desc">中学圣日记</div>
+      </div>  
+      <div class="gallery">
+        <a  href="detailpage.html">
+        <img src="src/main2.jpeg" alt="#" >  
+        </a>
+        <div class="desc">你的名字</div>
+    </div>  
+    <div class="gallery">
+      <a  href="detailpage.html">
+      <img src="src/main3.jpeg" alt="#" >  
+      </a>
+      <div class="desc">机动搜查队404</div>
+    </div>  
+    <div class="gallery">
+      <a  href="detailpage.html">
+    <img src="src/main4.jpeg" alt="#" > 
+      </a> 
+    <div class="desc">非自然死亡</div>
+    </div>  
+      </div>
+      
+    </div>
+   
+    <div class="card" style=" margin-top: 50px;">
+      <h2>大众影评</h2>
+      <ul>
+        <li><a href="https://movie.douban.com/subject/27140017/" style="color: #333;">豆瓣影评</a></li>
+        <li><a href="https://zhuanlan.zhihu.com/p/59234950" style="color: #333;">知乎影评</a></li>
+        <li><a href="http://www.360doc.com/content/20/0903/09/31655491_933735901.shtml" style="color: #333;">百度影评</a></li>
+      </ul>
+     
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>关于我</h2>
+      <div class="fakeimg" style="height:100px;">一个web小白</div>
+    </div>
+    <div class="card" >
+      <h3>高分影视</h3>
+      <ul>          
+        <li><a href="detailpage.html" style="color: #333;">非自然死亡</a></li> 
+        <li><a href="detailpage.html" style="color: #333;">中学圣日记</a></li>
+        <li><a href="detailpage.html" style="color: #333;">我和我的祖国</a></li>
+   </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h4>版权声明及联系方式</h4>
+</div>
+</body>
+</html>

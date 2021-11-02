@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* 页眉/Blog 标题 */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+/* 设置上导航栏的样式 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* 设置 topnav 链接的样式 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 150px;
+  text-decoration: none;
+}
+
+/* 改变鼠标悬停时的颜色 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 创建两个不相等的彼此并排的浮动列 */
+/* 左列 */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* 右列 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 40px;
+}
+
+/* 伪图像 */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* 为文章添加卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top:  20px;
+}
+
+/* 清除列之后的浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 页脚 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+ul {
+  background: #aaa;
+  padding: 20px;
+}
+ul li {
+ 
+  margin: 5px;
+}
+div.gallery {
+  margin:10px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+
+div.gallery img {
+  width:100%;
+  height: 200px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+/* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 400 像素时，使导航链接堆叠而不是并排 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>详情页</h1>
+  
+</div>
+
+<div class="topnav">
+    <a href="index.html">首页</a>
+    <a href="listpage.html">电影</a>
+    <a href="listpage.html">电视剧</a>
+    <a href="listpage.html" style="float:right">搜索</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+        <h2>内容简介</h2>
+                 
+          <div class="fakeimg" style="height:100px;">
+            在“非自然死亡原因研究所”（简称“UDI”）工作的三澄美琴（石原里美饰）是专门探查死者死因的解剖医生。她最不能容忍的是对“非自然死亡”不闻不问。在她看来，“非自然”的背后必定有着需要法医来追究的真相，比如伪装杀人、医疗失误、未知的疑难疾病等等。然而，在日本，很多非自然死亡的死者都未经解剖就火化了。美琴与她那些个性鲜明的同事们一起，向这样的现实发起了挑战 [6]  。
+          </div>
+   
+          
+      </div>  
+      <div class="card">
+        <h2>影评</h2>
+        <ul>
+          <li><a href="https://movie.douban.com/subject/27140017/" style="color: #333;">豆瓣影评</a></li>
+          <li><a href="https://zhuanlan.zhihu.com/p/59234950" style="color: #333;">知乎影评</a></li>
+          <li><a href="http://www.360doc.com/content/20/0903/09/31655491_933735901.shtml" style="color: #333;">百度影评</a></li>
+        </ul>
+      </div>  
+      <div class="card">
+        <h2>影视剪辑、剧照</h2>
+        </div>
+        
+      <div class="gallery">
+        <img src="src/unnatural death 1.jpeg" alt="#" >  
+    </div>  
+    <div class="gallery">
+      <img src="src/unnatural death 2.jpeg" alt="#" >  
+  </div>  
+  <div class="gallery">
+    <img src="src/unnatural death 3.jpeg" alt="#" >  
+</div>  
+<div class="gallery">
+  <img src="src/unnatural death 4.jpeg" alt="#" >  
+</div>  
+
+      
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>导演</h2>
+      <div class="fakeimg" style="height:100px;">冢原亚由子</div>
+      <div class="fakeimg" style="height:100px;">竹村谦太郎</div>
+      <div class="fakeimg" style="height:100px;">村尾嘉昭</div>
+    </div>
+    <div class="card">
+      <h3>演员1</h3>
+      <div class="fakeimg"><p>石原里美</p></div>
+     
+      <h3>演员2</h3>
+      <div class="fakeimg"><p>洼田正孝</p></div>
+      <h3>演员3</h3>
+      <div class="fakeimg"><p>井浦新</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>版权声明及联系方式</h2>
+</div>
+
+</body>
+</html>
+

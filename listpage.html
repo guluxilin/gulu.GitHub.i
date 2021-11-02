@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* 页眉/Blog 标题 */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+/* 设置上导航栏的样式 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* 设置 topnav 链接的样式 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 150px;
+  text-decoration: none;
+}
+
+/* 改变鼠标悬停时的颜色 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 创建两个不相等的彼此并排的浮动列 */
+/* 左列 */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* 右列 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 40px;
+}
+
+/* 伪图像 */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* 为文章添加卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top:  20px;
+}
+
+/* 清除列之后的浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 页脚 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+ul {
+  background: #aaa;
+  padding: 20px;
+}
+ul li {
+ 
+  margin: 5px;
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 400 像素时，使导航链接堆叠而不是并排 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>列表页</h1>
+  
+</div>
+
+<div class="topnav">
+    <a href="index.html"> 首页</a>
+  <a href="listpage.html">电影</a>
+  <a href="listpage.html">电视剧</a>
+  <a href="listpage.html" style="float:right">搜索</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+        <h2>中国影视推荐</h2>
+        <ul>          
+             <li><a href="detailpage.html" style="color: #333;">长津湖</a></li> 
+             <li><a href="detailpage.html" style="color: #333;">霸王别姬</a></li>
+             <li><a href="detailpage.html" style="color: #333;">我和我的祖国</a></li>
+        </ul>
+      </div>  
+      <div class="card">
+        <h2>日韩影视推荐</h2>
+        <ul>
+          <li><a href="detailpage.html" style="color: #333;">非自然死亡</a></li>
+          <li><a href="detailpage.html" style="color: #333;">中学圣日记</a></li>
+          <li><a href="detailpage.html" style="color: #333;">机动搜查队404</a></li>
+        </ul>
+      </div>  
+      <div class="card">
+        <h2>欧美影视推荐</h2>
+        <ul>
+            <li><a href="detailpage.html" style="color: #333;">神探夏洛克</a></li>
+            <li><a href="detailpage.html" style="color: #333;">速度与激情</a></li>
+            <li><a href="detailpage.html" style="color: #333;">头号玩家</a></li>
+        </ul>
+      </div>  
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>关于我</h2>
+      <div class="fakeimg" style="height:100px;">一个web小白</div>
+    </div>
+    <div class="card">
+      <h3>高分影视</h3>
+      <ul>          
+        <li><a href="detailpage.html" style="color: #333;">非自然死亡</a></li> 
+        <li><a href="detailpage.html" style="color: #333;">中学圣日记</a></li>
+        <li><a href="detailpage.html" style="color: #333;">我和我的祖国</a></li>
+   </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>版权声明及联系方式</h2>
+</div>
+
+</body>
+</html>
