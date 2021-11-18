@@ -45,28 +45,63 @@ textarea {
   resize: none;
 }
 </style>
+
 <body>
 
 <h1>表单页</h1>
 
 <div>
-  <form action="detailpage.html">
-    <label for="name">影视剧名称</label>
-    <input type="text" id="name"  placeholder="名称....">
+  <form name="myForm" action="./detailpage.html" onsubmit="return validateForm()" method="post">
+    <label for="name1">影视剧名称</label>
+    <input type="text" id="name"  placeholder="名称...." >
 
-    <label for="country">影片地区</label>
-    <select id="country" name="country">
+    <label for="place">影片地区</label>
+    <select id="country" name="country" onchange="testClk()">
       <option value="china">中国</option>
       <option value="japan">日本</option>
       <option value="america">欧美</option>
+      <option value="other">其他</option>
     </select>
+    <div id="org"></div> 
     <label for="summarize">情节简介</label>
       <textarea>巴拉巴拉....</textarea>
 
   
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" name='submit' id="submit">
   </form>
 </div>
 
+
+<script> 
+  function testClk(){ 
+    var obj = document.getElementById("org"); 
+    var sel = document.getElementById("country"); 
+    if (sel.value == "other") { 
+      var input1 = document.createElement('input');
+       input1.setAttribute('type', 'text');
+        input1.setAttribute('name', 'countrywrite'); 
+        obj.insertBefore(input1,null);
+      } }
+   </script> 
+
+<script>
+  function validateForm(){
+  var x=document.forms["myForm"]["name"].value;
+  var matches = x.match(/\d+/g);
+if (matches != null) {
+    alert('输入含有数字');
+    return false;
+}
+  if (x=="中学圣日记"){
+    alert("已有该影视剧");
+    return false;
+    }
+    if (x==null || x==""){
+    alert("影视名称输入不得为空");
+    return false;
+    }
+  }
+  </script>
+ 
 </body>
 </html>

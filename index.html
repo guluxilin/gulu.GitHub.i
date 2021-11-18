@@ -6,8 +6,15 @@
 <link rel="stylesheet" type="text/css" href="normalize.css">
 <link rel="stylesheet" type="text/css" href="css1.css">
 <link rel="stylesheet" type="text/css" href="css2.css">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link rel="stylesheet" href="font/iconfont.css">
+
+   <link rel="stylesheet" href="./jquery/css/jquery.plusgallery.css">
+<script src="./jquery/js/jquery-1.11.0.min.js"></script>
+<script src="./jquery/js/jquery.plusGallery.js"></script>
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -71,6 +78,7 @@ body {
   background-color: #f1f1f1;
   width: 100%;
   padding: 20px;
+  
 }
 
 /* 为文章添加卡片效果 */
@@ -144,11 +152,35 @@ div.fixed {
   bottom: 50%;
   right: 0;
   width: 30px;
-  height: 100px;
+  height: 150px;
   background-color: #f1f1f1;
   border: 5px solid #ddd;
   text-align: center;
 }
+
+
+div,img{
+            margin:0;
+             padding:0; 
+          }
+          img{
+              float:left;
+              height:300px;
+              width:10%;         }        
+            #div1{
+             width:100%;             
+             height:100%;
+             overflow: hidden;
+             border:solid #f1f1f1 2px;
+         }
+         #div2,#div3{
+             float:left;
+         }
+         #div4{
+             width:500%;/*这个属性很重要 让容器有足够的宽度实现滚动*/
+             float:left;
+         }
+
 /* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
@@ -164,9 +196,15 @@ div.fixed {
     width: 100%;
   }
 }
+
+
 </style>
+
 </head>
 <body>
+
+ 
+
 
   <div class="sticky">
     <form action="detailpage.html">
@@ -175,8 +213,12 @@ div.fixed {
   </div>
 
   <div class="fixed">
-    联系客服
+  <i class="iconfont">&#xec2e;</i>
+  <h5>联系客服</h5>
     </div>
+
+
+
 
 <div class="header">
   <h1>首页</h1>
@@ -194,36 +236,31 @@ div.fixed {
   <div class="leftcolumn">
     <div class="card">
       <h2>影视推荐</h2>   
-      <div class="fakeimg" style="height:250px;background-color:#f1f1f1;">
-        <div class="gallery">
-          <a  href="detailpage.html">
-          <img src="src/main1.jpeg" alt="#" >  
-          </a>
-          <div class="desc">中学圣日记</div>
-      </div>  
-      <div class="gallery">
-        <a  href="detailpage.html">
-        <img src="src/main2.jpeg" alt="#" >  
-        </a>
-        <div class="desc">你的名字</div>
-    </div>  
-    <div class="gallery">
-      <a  href="detailpage.html">
-      <img src="src/main3.jpeg" alt="#" >  
-      </a>
-      <div class="desc">机动搜查队404</div>
-    </div>  
-    <div class="gallery">
-      <a  href="detailpage.html">
-    <img src="src/main4.jpeg" alt="#" > 
-      </a> 
-    <div class="desc">非自然死亡</div>
-    </div>  
+      <div class="fakeimg" style="height:300px;background-color:#f1f1f1;">   
+        <div class="myplusgallery" style="position: relative;">
+          <div class="img-prev" title="Previous Image">‹</div>
+          <div class="img-next" title="Next Image">›</div>
+          <div class="img-slide">
+            <figure>
+              <img src="src/main1.jpeg" alt="Image Alt" />
+            </figure>
+            <figure>
+              <img src="src/main2.jpeg" alt="Image Alt" />
+            </figure>
+            <figure>
+              <img src="src/main3.jpeg" alt="Image Alt" />
+            </figure>
+            <figure>
+              <img src="src/main4.jpeg" alt="Image Alt" />
+            </figure>
+          </div>
+          <script>$('.myplusgallery').plusGallery();</script>
+        </div>
       </div>
       
     </div>
    
-    <div class="card" style=" margin-top: 50px;">
+    <div class="card" style=" margin-top: 30px;">
       <h2>大众影评</h2>
       <ul>
         <li><a href="https://movie.douban.com/subject/27140017/" style="color: #333;">豆瓣影评</a></li>
@@ -248,9 +285,35 @@ div.fixed {
     </div>
   </div>
 </div>
-
 <div class="footer">
   <h4>版权声明及联系方式</h4>
 </div>
+
+<script type="text/javascript">
+  window.onload=function(){
+        var v1=document.getElementById('div1');
+        var v2=document.getElementById('div2');
+        var v3=document.getElementById('div3');
+
+        v3.innerHTML= v2.innerHTML;//将v2容器里面的图片插入到v3容器里面  使其空白区域被遮住。
+        function fun(){
+          if(v1.scrollLeft<=0){
+              v1.scrollLeft=600;
+          }else{
+              v1.scrollLeft--;
+          }
+      }
+
+      var fun1=setInterval(fun,10);
+
+      v1.onmouseover = function() {//鼠标经过时  清除定时器  停止图片的滚动
+              clearInterval(fun1)
+          };
+      v1.onmouseout = function() {//鼠标离开后  继续滚动图片
+              fun1 = setInterval(fun, 10)
+          };
+  }
+
+</script>
 </body>
 </html>

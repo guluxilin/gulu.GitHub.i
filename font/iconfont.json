@@ -1,0 +1,30 @@
+{
+  "id": "2913997",
+  "name": "font",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5460560",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "ec2e",
+      "unicode_decimal": 60462
+    },
+    {
+      "icon_id": "21497127",
+      "name": "专家答疑",
+      "font_class": "zhuanjiadayibeifen",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "21497122",
+      "name": "维修",
+      "font_class": "weixiu",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}
