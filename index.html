@@ -96,7 +96,7 @@ h1 {
 
     <div class="login_logo">
         <h1>Login</h1>
-  <form name="myForm" action="./homepage.html" onsubmit="return validateForm()" method="post">
+  <form name="myForm" action="homepage.html" onsubmit="return validateForm()" method="post">
     <label for="name">用户名</label>
     <input type="text" id="name"placeholder="用户名" >
     <label for="password">密码</label>
@@ -153,10 +153,10 @@ h1 {
     setCookie("username",cname,30);
 	var user=getCookie("username");
 	if (user!=""){
-		alert("欢迎 " + user + " 再次访问");
+		alert("欢迎 " + user + "登录");
 	}
 	else {
-		user = prompt("请输入你的名字:","");
+		user = prompt("请输入你的用户名:","");
   		if (user!="" && user!=null){
     		setCookie("username",user,30);
     	}
