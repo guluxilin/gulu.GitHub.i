@@ -1,21 +1,51 @@
+ 
+
+/* 设置上导航栏的样式 */
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+	position:relative;
+	z-index: 3;
+  }
+  
+  /* 设置 topnav 链接的样式 */
+  .topnav a {
+	float: left;
+	display: block;
+	width:25%;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 5%;
+	text-decoration: none;
+  }
+  
+  /* 改变鼠标悬停时的颜色 */
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+ 
 .img-slide {
 	overflow: hidden;
 	white-space: nowrap;
 	position: relative;
 	font-size: 0;
 }
+
 .img-slide figure {
 	display: inline-block;
 	position: relative;
 	transition: transform 0.5s;
 	white-space: nowrap;
 	margin: 0;
+	width:100%
 }
 .img-slide img {
-	width: 500px;
-	margin-left: 2px;
-	height: 300px;
+	width: 100%;
+	margin-left: 0px;
+	height: 500px;
 }
+
 .img-prev, .img-next {
 	font-size: 70px;
 	height: 100%;

@@ -1,142 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-<title>咕噜咕噜的影视星球</title>
-<link rel="stylesheet" type="text/css" href="normalize.css">
-<link rel="stylesheet" type="text/css" href="css1.css">
-<link rel="stylesheet" type="text/css" href="css2.css">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-  <link rel="stylesheet" href="font/iconfont.css">
-
-   <link rel="stylesheet" href="./jquery/css/jquery.plusgallery.css">
-<script src="./jquery/js/jquery-1.11.0.min.js"></script>
-<script src="./jquery/js/jquery.plusGallery.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <title>登录</title>
+    <link rel="stylesheet" href="CSS/normalize.css">
 <style>
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Sofia;
-  padding: 10px;
-  background-image:url('src/background1.jpg');
-	background-repeat:repeat-x;
-}
-
-
-/* 页眉/Blog 标题 */
-.header {
-  padding: 30px;
-  text-align: center;
-  
-}
-/* 设置上导航栏的样式 */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* 设置 topnav 链接的样式 */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 150px;
-  text-decoration: none;
-}
-
-/* 改变鼠标悬停时的颜色 */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* 创建两个不相等的彼此并排的浮动列 */
-/* 左列 */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-  
-}
-
-/* 右列 */
-.rightcolumn {
-  float: left;
-  width: 25%;
- 
-  padding-left: 20px;
-  padding-right: 80px;
-  
-}
-
-/* 伪图像 */
-.fakeimg {
-  background-color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-  
-}
-
-/* 为文章添加卡片效果 */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-  border: 5px solid #ccc;
-}
-
-/* 清除列之后的浮动 */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* 页脚 */
-.footer {
-  padding: 5px;
-  text-align: center;
-  background: #f1f1f1;
-  margin-top: 20px;
-}
-ul {
-  background: #f1f1f1;
-  padding: 20px;
-}
-ul li {
- 
-  margin: 5px;
-}
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 20%;
-  height: 80%;
-
-}
-div.gallery img {
-  width: 100%;
-  height: 100%;
-  
-}
-
-div.desc {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-/*粘性定位*/
-div.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 5px;
-  
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans',sans-serif;
+    margin: 0;
+    background: url(src/background.jpeg) no-repeat;
+    background-size: cover;
 }
 input[type=text], select {
   width: 100%;
@@ -147,173 +22,146 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-div.fixed {
-  position: fixed;
-  bottom: 50%;
-  right: 0;
-  width: 30px;
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  display: block;
+}
+textarea {
+  width: 100%;
   height: 150px;
-  background-color: #f1f1f1;
-  border: 5px solid #ddd;
-  text-align: center;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
 }
-
-
-div,img{
-            margin:0;
-             padding:0; 
-          }
-          img{
-              float:left;
-              height:300px;
-              width:10%;         }        
-            #div1{
-             width:100%;             
-             height:100%;
-             overflow: hidden;
-             border:solid #f1f1f1 2px;
-         }
-         #div2,#div3{
-             float:left;
-         }
-         #div4{
-             width:500%;/*这个属性很重要 让容器有足够的宽度实现滚动*/
-             float:left;
-         }
-
-/* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
+.login_logo
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width: 300px;
+    height: 400px;
 }
-
-/* 响应式布局 - 当屏幕的宽度小于 400 像素时，使导航链接堆叠而不是并排 */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
+.login_logo h1 {
+    color: #fff;
+    text-shadow: 0 0 10px;
+    letter-spacing: 1px;
+    text-align: center;
 }
-
-
+h1 {
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.register
+{
+  width: 300px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.register:hover
+{
+    background-color: #45a049;
+}
 </style>
 
-</head>
 <body>
 
- 
-
-
-  <div class="sticky">
-    <form action="detailpage.html">
-      <input type="text" id="name"  placeholder="搜索内容...">
-    </form>
-  </div>
-
-  <div class="fixed">
-  <i class="iconfont">&#xec2e;</i>
-  <h5>联系客服</h5>
-    </div>
-
-
-
-
-<div class="header">
-  <h1>首页</h1>
-  
+    <div class="login_logo">
+        <h1>Login</h1>
+  <form name="myForm" action="./homepage.html" onsubmit="return validateForm()" method="post">
+    <label for="name">用户名</label>
+    <input type="text" id="name"placeholder="用户名" >
+    <label for="password">密码</label>
+    <input type="text" id="password"  placeholder="密码" >
+    <label for="place">身份</label>
+    <select id="identity" name="identity" onchange="testClk()">
+      <option value="user">用户</option>
+      <option value="manager">管理员</option>
+    </select>
+    <input type="submit" value="登录" name='login' id="login" onclick="javascript:checkCookie(document.getElementById('name').value);" >
+  </form>
 </div>
 
-<div class="topnav">
-  <a href="listpage.html">电影</a>
-  <a href="listpage.html">电视剧</a>
-  <a href="listpage.html">关于网站</a>
-  <a href="formpage.html" >搜索</a>
-</div>
+<script> 
+  function testClk(){ 
+    var obj = document.getElementById("org"); 
+    var sel = document.getElementById("identity"); 
+    if (sel.value == "manager") { 
+      var input1 = document.createElement('input');
+       input1.setAttribute('type', 'text');
+        input1.setAttribute('name', 'countrywrite'); 
+        obj.insertBefore(input1,null);
+      } }
+   </script> 
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>影视推荐</h2>   
-      <div class="fakeimg" style="height:300px;background-color:#f1f1f1;">   
-        <div class="myplusgallery" style="position: relative;">
-          <div class="img-prev" title="Previous Image">‹</div>
-          <div class="img-next" title="Next Image">›</div>
-          <div class="img-slide">
-            <figure>
-              <img src="src/main1.jpeg" alt="Image Alt" />
-            </figure>
-            <figure>
-              <img src="src/main2.jpeg" alt="Image Alt" />
-            </figure>
-            <figure>
-              <img src="src/main3.jpeg" alt="Image Alt" />
-            </figure>
-            <figure>
-              <img src="src/main4.jpeg" alt="Image Alt" />
-            </figure>
-          </div>
-          <script>$('.myplusgallery').plusGallery();</script>
-        </div>
-      </div>
-      
-    </div>
-   
-    <div class="card" style=" margin-top: 30px;">
-      <h2>大众影评</h2>
-      <ul>
-        <li><a href="https://movie.douban.com/subject/27140017/" style="color: #333;">豆瓣影评</a></li>
-        <li><a href="https://zhuanlan.zhihu.com/p/59234950" style="color: #333;">知乎影评</a></li>
-        <li><a href="http://www.360doc.com/content/20/0903/09/31655491_933735901.shtml" style="color: #333;">百度影评</a></li>
-      </ul>
-     
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>关于我</h2>
-      <div class="fakeimg" style="height:100px;">一个web小白</div>
-    </div>
-    <div class="card" >
-      <h3>高分影视</h3>
-      <ul>          
-        <li><a href="detailpage.html" style="color: #333;">非自然死亡</a></li> 
-        <li><a href="detailpage.html" style="color: #333;">中学圣日记</a></li>
-        <li><a href="detailpage.html" style="color: #333;">我和我的祖国</a></li>
-   </ul>
-    </div>
-  </div>
-</div>
-<div class="footer">
-  <h4>版权声明及联系方式</h4>
-</div>
-
-<script type="text/javascript">
-  window.onload=function(){
-        var v1=document.getElementById('div1');
-        var v2=document.getElementById('div2');
-        var v3=document.getElementById('div3');
-
-        v3.innerHTML= v2.innerHTML;//将v2容器里面的图片插入到v3容器里面  使其空白区域被遮住。
-        function fun(){
-          if(v1.scrollLeft<=0){
-              v1.scrollLeft=600;
-          }else{
-              v1.scrollLeft--;
-          }
-      }
-
-      var fun1=setInterval(fun,10);
-
-      v1.onmouseover = function() {//鼠标经过时  清除定时器  停止图片的滚动
-              clearInterval(fun1)
-          };
-      v1.onmouseout = function() {//鼠标离开后  继续滚动图片
-              fun1 = setInterval(fun, 10)
-          };
+<script>
+  function validateForm(){
+  var x=document.forms["myForm"]["name"].value;
+    if (x==null || x==""){
+    alert("输入不得为空");
+    return false;
+    }
   }
+  </script>
 
-</script>
+
+ <script>
+    function setCookie(cname,cvalue,exdays){
+        var d = new Date();
+        d.setTime(d.getTime()+(exdays*24*60*60*1000));
+        var expires = "expires="+d.toGMTString();
+        document.cookie = cname+"="+cvalue+"; "+expires;
+    }
+    function getCookie(cname){
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+        }
+        return "";
+    }
+    function checkCookie(cname){
+    setCookie("username",cname,30);
+	var user=getCookie("username");
+	if (user!=""){
+		alert("欢迎 " + user + " 再次访问");
+	}
+	else {
+		user = prompt("请输入你的名字:","");
+  		if (user!="" && user!=null){
+    		setCookie("username",user,30);
+    	}
+	}
+}
+    </script>
 </body>
 </html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+<title>咕噜咕噜的摄影星球</title>
+  <link rel="stylesheet" href="font/iconfont.css">
+  <link rel="stylesheet" href="font1/iconfont.css">
+  <link rel="stylesheet" href="CSS/normalize.css">
+   <link rel="stylesheet" href="./jquery/css/jquery.plusgallery.css">
+<script src="./jquery/js/jquery-1.11.0.min.js"></script>
+<script src="./jquery/js/jquery.plusGallery.js"></script>
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+    padding: 0;
+}
+/* 页眉/Blog 标题 */
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+.mainbox
+{
+  width:100%;
+  display: block;
+}
+
+.mainheader
+{
+   height: 42px;
+    margin: 30px auto;
+}
+.w
+{
+  width:1200px;
+  margin-right: auto;
+    margin-left: auto;
+}
+.logo
+{
+  float: left;
+    width: 132px;
+    height: 42px;
+}
+
+.nav
+{
+  
+    margin-left: 60px;
+}
+.nav ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+}
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+.search{
+  float: left;
+    width: 418px;
+    height: 42px;
+    margin-left: 50px;
+}
+.search input {
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+    float: left;
+}
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    border: 0;
+}
+button {
+    cursor: pointer;
+}
+.user{
+  float: right;
+    margin-right: 30px;
+}
+.user span {
+    float: right;
+    font-size: 14px;
+    line-height: 42px;
+    color: #666666;
+}
+
+/*粘性定位*/
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+}
+
+div.fixed {
+  position: fixed;
+  bottom: 50%;
+  right: 0;
+}
+.fixed button
+{
+    width: 50px;
+    height: 42px;
+    border: 0;
+background:rgba(0,0,0,0)
+}
+div.box2
+{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+div.gallery {
+  margin: 1.5%;
+  border: 1px solid #ccc;
+  float: left;
+  width: 20%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 200px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+div.box1
+{
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+
+}
+div.detail1
+{
+  width: 44px;
+    height: 6px;
+    background: #f84949;
+    margin: 16px auto;
+    padding: 0;
+    overflow: hidden;
+}
+div.font1
+{
+  font-size: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+.r {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+.maincontent {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.contentbox {
+    position: relative;
+    margin-bottom: 72px;
+    width: 626px;
+    height: 320px;
+    border-radius: 4px;
+}
+.content {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.content img {
+    height: 320px;
+    width: 625px;
+    display: inline-block;
+}
+.introduction {
+    width: 340px;
+    height: 74px;
+    background: #fff;
+    position: absolute;
+    bottom: -37px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 12px 0;
+}
+.introduction .font {
+    font-size: 22px;
+    font-weight: 500;
+    color: #f84949;
+    line-height: 24px;
+    margin-bottom: 8px;
+    -webkit-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="mainbox">
+    <div class="mainheader w">
+    <div class="logo">
+      <img src="src/logo.png" style="width: 132px;height: 42px;" alt>
+    </div>
+     <div class="nav">
+      <ul>
+        <li><a href="index.html">登录</a></li>
+        <li><a href="listpage.html">列表页</a></li>
+        <li><a href="detailpage.html">详情页</a></li>
+        <li><a href="formpage.html">表单页</a></li>
+      </ul>
+    </div>
+    <div class="search">
+      <input type="text" value="输入关键词">
+      <button>
+        <i class="iconfont">&#xe62f;</i>
+      </button>
+    </div>
+    <div class="user">
+      <img src="src/user.png" style=" width:52px;height:52px;" alt>
+      <span>咕噜咕噜</span>
+    </div>
+  </div>
+  </div>
+
+  <div class="myplusgallery w" style="position: relative;">
+    <div class="topnav">
+      <a href="listpage.html">图片</a>
+      <a href="listpage.html">视频</a>
+      <a href="listpage.html">摄影</a>
+      <a href="listpage.html" >音乐</a>
+    </div>
+    <div class="img-prev" title="Previous Image">‹</div>
+    <div class="img-next" title="Next Image">›</div>
+    <div class="img-slide">
+      <figure>
+        <img src="src/0001.jpg" alt="Image Alt" />
+      </figure>
+      <figure>
+        <img src="src/0002.jpg" alt="Image Alt" />
+      </figure>
+      <figure>
+        <img src="src/0003.jpg" alt="Image Alt" />
+      </figure>
+      <figure>
+        <img src="src/0007.jpg" alt="Image Alt" />
+      </figure>
+      <figure>
+        <img src="src/0005.jpg" alt="Image Alt" />
+      </figure>
+      <figure>
+        <img src="src/0006.jpg" alt="Image Alt" />
+      </figure> 
+    </div>
+    <script>$('.myplusgallery').plusGallery();</script>
+  </div>
+
+
+  <div class="fixed">
+  <button>
+    <i class="iconfont">&#xec2e;</i>
+  </button>
+    </div>
+
+    <div class="box1">
+      <h2 style="font-weight:normal" class="font1">我的专栏</h2>
+      <div class="detail1"></div>
+<div class="maincontent r">
+  <div class="contentbox">
+<div calss="content" style="width:100%;height:320px">
+  <img src="src/0006.jpg" style="width:626px;height:320px;"alt>
+  <div class="introduction">
+    <h2 class="font">图片</h2>
+  </div>
+</div>
+</div>
+
+<div class="contentbox">
+  <div calss="content" style="width:100%;height:320px">
+    <img src="src/0003.jpg" style="width:626px;height:320px;"alt>
+    <div class="introduction">
+      <h2 class="font">视频</h2>
+    </div>
+  </div>
+  </div>
+
+  <div class="contentbox">
+    <div calss="content" style="width:100%;height:320px">
+      <img src="src/0001.jpg" style="width:626px;height:320px;"alt>
+      <div class="introduction">
+        <h2 class="font">摄影</h2>
+      </div>
+    </div>
+    </div>
+
+    <div class="contentbox">
+      <div calss="content" style="width:100%;height:320px">
+        <img src="src/0002.jpg" style="width:626px;height:320px;"alt>
+        <div class="introduction">
+          <h2 class="font">音乐</h2>
+        </div>
+      </div>
+      </div>
+</div>
+</div>
+  <div class="box1">
+    <h2 style="font-weight:normal" class="font1" >发表素材</h2>
+    <div class="detail1"></div>
+   <div class="box2">
+      <div class="gallery">
+      <a target="_blank" href="#">
+        <img src="src/link1.jpg" alt="Cinque Terre" width="600" height="400">
+      </a>
+      <div class="desc">图片专栏</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="#">
+          <img src="src/link5.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">视频专栏</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="#">
+          <img src="src/link3.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">摄影专栏</div>
+      </div>
+
+      <div class="gallery">
+    <a target="_blank" href="#">
+      <img src="src/link4.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">音乐专栏</div>
+    </div> 
+   </div>
+ </div>
+ </body>
+ </html>
