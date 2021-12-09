@@ -75,20 +75,24 @@ h1 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-.register
+.link
 {
-  width: 300px;
+  display: block;
+  color:white;
   background-color: #4CAF50;
-  color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-align: center;
 }
-.register:hover
+.link:hover
 {
     background-color: #45a049;
+}
+a {
+    text-decoration: none;
 }
 </style>
 
@@ -106,7 +110,7 @@ h1 {
       <option value="user">用户</option>
       <option value="manager">管理员</option>
     </select>
-    <input type="submit" value="登录" name='login' id="login" onclick="javascript:checkCookie(document.getElementById('name').value);" >
+    <a class="link" href="homepage.html" onclick="javascript:checkCookie(document.getElementById('name').value);">登录</a>
   </form>
 </div>
 
