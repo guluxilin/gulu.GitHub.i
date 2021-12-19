@@ -110,7 +110,8 @@ a {
       <option value="user">用户</option>
       <option value="manager">管理员</option>
     </select>
-    <a class="link" href="homepage.html" onclick="javascript:checkCookie(document.getElementById('name').value);">登录</a>
+    <div id="org"></div>
+    <a class="link" href="homepage.html" onclick="javascript:checkCookie(document.getElementById('name').value);return validateForm()">登录</a>
   </form>
 </div>
 

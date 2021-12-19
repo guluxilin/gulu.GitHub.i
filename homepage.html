@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="font/iconfont.css">
   <link rel="stylesheet" href="font1/iconfont.css">
   <link rel="stylesheet" href="CSS/normalize.css">
-   <link rel="stylesheet" href="./jquery/css/jquery.plusgallery.css">
+  <link rel="stylesheet" href="./jquery/css/jquery.plusgallery.css">
 <script src="./jquery/js/jquery-1.11.0.min.js"></script>
 <script src="./jquery/js/jquery.plusGallery.js"></script>
 <style>
@@ -16,7 +16,6 @@
   margin: 0;
     padding: 0;
 }
-/* 页眉/Blog 标题 */
 a {
     text-decoration: none;
 }
@@ -200,14 +199,16 @@ div.font1
 .contentbox {
     position: relative;
     margin-bottom: 72px;
+    margin-left: auto;
+    margin-right: auto;
     width: 626px;
     height: 320px;
-    border-radius: 4px;
 }
 .content {
     position: relative;
     overflow: hidden;
     text-align: center;
+    border-radius: 8px;
 }
 .content img {
     height: 320px;
@@ -237,7 +238,12 @@ div.font1
     -o-transition: inherit;
     transition: inherit;
 }
-
+.footer {
+  padding: 50px;
+  text-align: center;
+  background: #f6f9fa;
+  margin-top: 40px;
+}
 
 </style>
 </head>
@@ -312,43 +318,43 @@ div.font1
       <div class="detail1"></div>
 <div class="maincontent r">
   <div class="contentbox">
-<div calss="content" style="width:100%;height:320px">
+<a class="content" style="width:100%;height:320px" href="listpage.html">
   <img src="src/0006.jpg" style="width:626px;height:320px;"alt>
   <div class="introduction">
     <h2 class="font">图片</h2>
   </div>
-</div>
+</a>
 </div>
 
 <div class="contentbox">
-  <div calss="content" style="width:100%;height:320px">
+  <a class="content" style="width:100%;height:320px" href="listpage.html">
     <img src="src/0003.jpg" style="width:626px;height:320px;"alt>
     <div class="introduction">
       <h2 class="font">视频</h2>
     </div>
-  </div>
+  </a>
   </div>
 
   <div class="contentbox">
-    <div calss="content" style="width:100%;height:320px">
+    <a class="content" style="width:100%;height:320px" href="listpage.html">
       <img src="src/0001.jpg" style="width:626px;height:320px;"alt>
       <div class="introduction">
         <h2 class="font">摄影</h2>
       </div>
-    </div>
+    </a>
     </div>
 
     <div class="contentbox">
-      <div calss="content" style="width:100%;height:320px">
+      <a class="content" style="width:100%;height:320px" href="listpage.html">
         <img src="src/0002.jpg" style="width:626px;height:320px;"alt>
         <div class="introduction">
           <h2 class="font">音乐</h2>
         </div>
-      </div>
+      </a>
       </div>
 </div>
 </div>
-  <div class="box1">
+  <div class="box1" style="padding-top: 0%;">
     <h2 style="font-weight:normal" class="font1" >发表素材</h2>
     <div class="detail1"></div>
    <div class="box2">
@@ -380,5 +386,8 @@ div.font1
     </div> 
    </div>
  </div>
+ <div class="footer">
+  <h2>版权声明及联系方式</h2>
+</div>
  </body>
  </html>
