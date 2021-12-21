@@ -146,7 +146,7 @@ button {
 }
 .shot_side
 {
-    top: 72px;
+    top: 150px;
     position: fixed;
 }
 .shot_side .shot_item
@@ -163,6 +163,200 @@ button {
 .shot_side .shot_item span {
     vertical-align: middle;
 }
+.column
+{
+  font-size: 0;
+    padding-top: 30px;
+    width:1000px;
+}
+.column .leftcolumn
+{
+    width: 680px;
+    display: inline-block;
+    margin-right: 40px;
+    vertical-align: top;
+}
+.column .leftcolumn .head1
+{
+  line-height: 25px;
+    font-size: 18px;
+    color: #222;
+}
+.column .leftcolumn .articlelist
+{
+  margin: 0;
+    padding: 0;
+}
+.articlecontain
+{
+   background: #fff;
+    border-bottom: 1px solid #f4f5f7;
+    cursor: pointer;
+}
+.articlecontain .articleholder
+{
+  width: 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+    position:relative;
+    margin-bottom: 20px;
+}
+.articlemain
+{
+  width: 543px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+.articlemain .articlemaintitle
+{
+  max-width: 100%;
+    font-size: 20px;
+    color: #212121;
+    line-height: 26px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.articlemain .articlemaintitle .listtitle
+{
+  display: inline-block;
+    vertical-align: top;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.articlemain .articlemaindetail
+{
+  margin-top: 4px;
+    font-size: 12px;
+    color: #99a2aa;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.articlemain .information
+{
+   height: 24px;
+    position: absolute;
+    vertical-align: top;
+    margin-top: 20px;
+}
+.writer
+{
+  font-size: 0;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: top;
+}
+.writerhead
+{
+  border-radius: 20px;
+    height: 24px;
+    width: 24px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+.writer img
+{
+  width:100%;
+  height:100%;
+}
+.writername
+{
+  margin-left: 5px;
+    font-size: 12px;
+    color: #99a2aa;
+    line-height: 16px;
+    vertical-align: middle;
+    max-width: 120px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-right:50px;
+}
+.classify
+{ font-size: 12px;
+  padding: 0 5px 1px;
+    margin-right: 25px;
+    color: #99a2aa;
+    bottom: 0;
+}
+.view
+{ font-size: 12px;
+   margin-right: 25px;
+   color: #99a2aa;
+}
+.rightcolumn
+{
+  width: 260px;
+    display: inline-block;
+    font-size: 12px;
+}
+.rank
+{
+  width: 100%;
+}
+.rank .title
+{
+  border-bottom: 1px solid #e5e9ef;
+    min-height: 34px;
+}
+.rank .title label
+{
+  display: inline-block;
+    font-size: 18px;
+    color: #222;
+}
+.titlelist
+{
+  float: right;
+    font-size: 0;
+    height: 24px;
+    line-height: 24px;
+}
+.titlelist li
+{
+   height: 26px;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 20px;
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+.ranklist
+{
+  height:390px;
+}
+.listitem
+{
+  line-height: 39px;
+    background-color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.listitem a
+{
+  color:#222;
+}
+.rankindex
+{
+  background: #f25d8e;
+  height: 18px;
+    width: 18px;
+    line-height: 18px;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    margin-right: 6px;
+}
+
 
 /* 页脚 */
 .footer {
@@ -236,6 +430,259 @@ button {
         <a href="detailpage.html" class="shot_item">
             <span>推荐</span>
         </a>
+    </div>
+    <div class="column">
+      <div class="leftcolumn">
+        <div class="head1">
+          <label>推荐文章</label>
+        </div>
+        <div class="articlecontain">
+          <div class="articleholder">
+            <div class="articlemain">
+              <a href="detailpage.html" class="articlemaintitle">
+                <span class="listtitle">构图方法与摄影技巧</span>
+              </a>
+              <div class="articlemaindetail">
+                很久很久以前，有一种构图方法，阿巴阿巴阿巴阿巴。。。。。。。
+              </div>
+              <div class="information">
+              <div class="writer">
+                <span class="writerhead">
+                  <img src="./src/user.png">
+                </span>
+              </div>
+                <span class="writername">
+                  咕噜咕噜
+                </span>
+              <span class="classify">
+                摄影技巧
+              </span>
+                <span class="view">
+                  点赞
+                </span>
+                <span class="view">
+                  投币
+                </span>
+                <span class="view">
+                  收藏
+                </span>
+            </div>
+              </div>
+            </div>
+          </div>
+          <div class="articlecontain">
+            <div class="articleholder">
+              <div class="articlemain">
+                <a href="detailpage.html" class="articlemaintitle">
+                  <span class="listtitle">构图方法与摄影技巧</span>
+                </a>
+                <div class="articlemaindetail">
+                  很久很久以前，有一种构图方法，阿巴阿巴阿巴阿巴。。。。。。。
+                </div>
+                <div class="information">
+                <div class="writer">
+                  <span class="writerhead">
+                    <img src="./src/user.png">
+                  </span>
+                </div>
+                  <span class="writername">
+                    咕噜咕噜
+                  </span>
+                <span class="classify">
+                  摄影技巧
+                </span>
+                  <span class="view">
+                    点赞
+                  </span>
+                  <span class="view">
+                    投币
+                  </span>
+                  <span class="view">
+                    收藏
+                  </span>
+              </div>
+                </div>
+              </div>
+            </div>
+            <div class="articlecontain">
+              <div class="articleholder">
+                <div class="articlemain">
+                  <a href="detailpage.html" class="articlemaintitle">
+                    <span class="listtitle">构图方法与摄影技巧</span>
+                  </a>
+                  <div class="articlemaindetail">
+                    很久很久以前，有一种构图方法，阿巴阿巴阿巴阿巴。。。。。。。
+                  </div>
+                  <div class="information">
+                  <div class="writer">
+                    <span class="writerhead">
+                      <img src="./src/user.png">
+                    </span>
+                  </div>
+                    <span class="writername">
+                      咕噜咕噜
+                    </span>
+                  <span class="classify">
+                    摄影技巧
+                  </span>
+                    <span class="view">
+                      点赞
+                    </span>
+                    <span class="view">
+                      投币
+                    </span>
+                    <span class="view">
+                      收藏
+                    </span>
+                </div>
+                  </div>
+                </div>
+              </div>
+              <div class="articlecontain">
+                <div class="articleholder">
+                  <div class="articlemain">
+                    <a href="detailpage.html" class="articlemaintitle">
+                      <span class="listtitle">构图方法与摄影技巧</span>
+                    </a>
+                    <div class="articlemaindetail">
+                      很久很久以前，有一种构图方法，阿巴阿巴阿巴阿巴。。。。。。。
+                    </div>
+                    <div class="information">
+                    <div class="writer">
+                      <span class="writerhead">
+                        <img src="./src/user.png">
+                      </span>
+                    </div>
+                      <span class="writername">
+                        咕噜咕噜
+                      </span>
+                    <span class="classify">
+                      摄影技巧
+                    </span>
+                      <span class="view">
+                        点赞
+                      </span>
+                      <span class="view">
+                        投币
+                      </span>
+                      <span class="view">
+                        收藏
+                      </span>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="articlecontain">
+                  <div class="articleholder">
+                    <div class="articlemain">
+                      <a href="detailpage.html" class="articlemaintitle">
+                        <span class="listtitle">构图方法与摄影技巧</span>
+                      </a>
+                      <div class="articlemaindetail">
+                        很久很久以前，有一种构图方法，阿巴阿巴阿巴阿巴。。。。。。。
+                      </div>
+                      <div class="information">
+                      <div class="writer">
+                        <span class="writerhead">
+                          <img src="./src/user.png">
+                        </span>
+                      </div>
+                        <span class="writername">
+                          咕噜咕噜
+                        </span>
+                      <span class="classify">
+                        摄影技巧
+                      </span>
+                        <span class="view">
+                          点赞
+                        </span>
+                        <span class="view">
+                          投币
+                        </span>
+                        <span class="view">
+                          收藏
+                        </span>
+                    </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="articlecontain">
+                    <div class="articleholder">
+                      <div class="articlemain">
+                        <a href="detailpage.html" class="articlemaintitle">
+                          <span class="listtitle">构图方法与摄影技巧</span>
+                        </a>
+                        <div class="articlemaindetail">
+                          很久很久以前，有一种构图方法，阿巴阿巴阿巴阿巴。。。。。。。
+                        </div>
+                        <div class="information">
+                        <div class="writer">
+                          <span class="writerhead">
+                            <img src="./src/user.png">
+                          </span>
+                        </div>
+                          <span class="writername">
+                            咕噜咕噜
+                          </span>
+                        <span class="classify">
+                          摄影技巧
+                        </span>
+                          <span class="view">
+                            点赞
+                          </span>
+                          <span class="view">
+                            投币
+                          </span>
+                          <span class="view">
+                            收藏
+                          </span>
+                      </div>
+                        </div>
+                      </div>
+                    </div>
+                
+        </div>
+        <div class="rightcolumn">
+          <div class="rank">
+          <div class="title">
+              <label>排行榜</label>
+              <ul class="titlelist">
+                <li>图片</li>
+                <li>视频</li>
+                <li>摄影</li>
+                <li>音乐</li>
+              </ul>
+          </div>
+          <ul class="ranklist">
+            <li class="listitem">
+              <span class="rankindex">1</span>
+              <a href="detailpage.html">一些摄影技巧的小知识</a>
+            </li>
+            <li class="listitem">
+              <span class="rankindex">2</span>
+              <a href="detailpage.html">一些摄影技巧的小知识</a>
+            </li>
+            <li class="listitem">
+              <span class="rankindex">3</span>
+              <a href="detailpage.html">一些摄影技巧的小知识</a>
+            </li>
+            <li class="listitem">
+              <span class="rankindex">4</span>
+              <a href="detailpage.html">一些摄影技巧的小知识</a>
+            </li>
+            <li class="listitem">
+              <span class="rankindex">5</span>
+              <a href="detailpage.html">一些摄影技巧的小知识</a>
+            </li>
+            <li class="listitem">
+              <span class="rankindex">6</span>
+              <a href="detailpage.html">一些摄影技巧的小知识</a>
+            </li>
+          </ul>
+          
+        </div>
+        </div>
+      </div>
     </div>
 </div>
 
