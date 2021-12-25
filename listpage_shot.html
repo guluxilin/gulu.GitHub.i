@@ -3,13 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <title>咕噜咕噜的摄影星球</title>
-  <link rel="stylesheet" href="font/iconfont.css">
-  <link rel="stylesheet" href="font1/iconfont.css">
-  <link rel="stylesheet" href="CSS/normalize.css">
-  <link rel="stylesheet" href="jquery2/css/default.css">
-  <script src="jquery2/js/jquery-1.11.0.min.js"></script>
-  <script src="jquery2/js/jquery.toTop.min.js"></script>
-  <script src="jquery2/js/jquery.toTop.js"></script>
+  <link rel="stylesheet" href="./font/font2/iconfont.css">
+  <link rel="stylesheet" href="./font/font1/iconfont.css">
+  <link rel="stylesheet" href="./CSS/normalize.css">
+  <link rel="stylesheet" href="./jquery/jquery3/css/style.css">
+  <script src="./jquery/jquery3/js/jquery-1.11.0.min.js"></script>
 <style>
 * {
   box-sizing: border-box;
@@ -300,6 +298,7 @@ button {
 .rank
 {
   width: 100%;
+  position:fixed;
 }
 .rank .title
 {
@@ -356,6 +355,10 @@ button {
     text-align: center;
     margin-right: 6px;
 }
+.leftsidebox
+{
+  padding-left:50px;
+}
 
 
 /* 页脚 */
@@ -369,43 +372,43 @@ button {
 </style>
 </head>
 <body>
-  <a class="to-top">Top ↑</a>  
-  <script>
-    $('.to-top').toTop({
-    //options with default values
-    autohide: true,
-    offset: 420,
-    speed: 500,
-    right: 15,
-    bottom: 30
-});           
-  </script>
-  <script>  $('.to-top').toTop(); </script>
-  <div class="mainbox">
-    <div class="mainheader w">
-    <div class="logo">
-      <img src="src/logo.png" style="width: 132px;height: 42px;" alt>
-    </div>
-     <div class="nav">
-      <ul>
-        <li><a href="index.html">登录</a></li>
-        <li><a href="listpage.html">列表页</a></li>
-        <li><a href="detailpage.html">详情页</a></li>
-        <li><a href="formpage.html">表单页</a></li>
-      </ul>
-    </div>
-    <div class="search">
-      <input type="text" value="输入关键词">
-      <button>
-        <i class="iconfont">&#xe62f;</i>
-      </button>
-    </div>
-    <div class="user">
-      <img src="src/user.png" style=" width:52px;height:52px;" alt>
-      <span>咕噜咕噜</span>
-    </div>
+<script>
+  $(function(){
+  $(".product_sort .bd .item").hover(function(){
+    $(this).addClass("layer");
+  },function(){
+    $(this).removeClass("layer");
+  });
+})
+</script>
+
+<div class="mainbox">
+  <div class="mainheader w">
+  <div class="logo">
+    <img src="src/logo.png" style="width: 132px;height: 42px;" alt>
   </div>
+   <div class="nav">
+    <ul>
+      <li><a href="index.html">登录</a></li>
+      <li><a href="listpage.html">列表页</a></li>
+      <li><a href="detailpage.html">详情页</a></li>
+      <li><a href="formpage.html">表单页</a></li>
+    </ul>
   </div>
+  <div class="search">
+    <input type="text" value="输入关键词">
+    <button>
+      <i class="iconfont">&#xe62f;</i>
+    </button>
+  </div>
+  <div class="user">
+    <img src="src/user.png" style=" width:52px;height:52px;" alt>
+    <span>咕噜咕噜</span>
+  </div>
+</div>
+</div>
+
+  
 <div class="topnav">
     <a href="homepage.html"> 首页</a>
   <a href="listpage.html">视频</a>
@@ -413,24 +416,197 @@ button {
   <a href="listpage.html" style="float:right">音乐</a>
 </div>
 
-<div class="shot_contain">
-    <div class="shot_side">
-        <a href="detailpage.html" class="shot_item">
-            <span>推荐</span>
-        </a>
-        <a href="detailpage.html" class="shot_item">
-            <span>推荐</span>
-        </a>
-        <a href="detailpage.html" class="shot_item">
-            <span>推荐</span>
-        </a>
-        <a href="detailpage.html" class="shot_item">
-            <span>推荐</span>
-        </a>
-        <a href="detailpage.html" class="shot_item">
-            <span>推荐</span>
-        </a>
+<div class="leftsidebox">
+<div class="product_sort fl">
+  <div class="hd">摄影专栏分类</div>
+  <div class="bd">
+    <div class="item">
+      <div class="title one"><a href="#"><i></i>摄影技巧</a></div>
+      <div class="list">
+        <a href="#"></a>
+        <a href="#">构图</a>
+        <a href="#">光线</a>
+        <a href="#">调色</a>
+      </div>
+      <div class="arrow">></div>
+      <div class="line"></div>
+      <div class="subitem">
+        <div class="inner">
+          <div class="tit tit1">
+            <div class="name">构图</div>
+            <ul>
+              <li><a href="#">均衡式构图</a></li>
+              <li><a href="#">对称式构图</a></li>
+              <li><a href="#">变化式构图</a></li>
+              <li><a href="#">对角线构图</a></li>
+              ......
+            </ul>
+          </div>
+          <div class="tit">
+            <div class="name">光线</div>
+            <ul>
+              <li><a href="#">顺光</a></li>
+              <li><a href="#">平行光</a></li>
+              <li><a href="#">逆光</a></li>
+              ......
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+    </div> 
+
+    <div class="bd">
+      <div class="item">
+        <div class="title one"><a href="#"><i></i>摄影技巧</a></div>
+        <div class="list">
+          <a href="#"></a>
+          <a href="#">构图</a>
+          <a href="#">光线</a>
+          <a href="#">调色</a>
+        </div>
+        <div class="arrow">></div>
+        <div class="line"></div>
+        <div class="subitem">
+          <div class="inner">
+            <div class="tit tit1">
+              <div class="name">构图</div>
+              <ul>
+                <li><a href="#">均衡式构图</a></li>
+                <li><a href="#">对称式构图</a></li>
+                <li><a href="#">变化式构图</a></li>
+                <li><a href="#">对角线构图</a></li>
+                ......
+              </ul>
+            </div>
+            <div class="tit">
+              <div class="name">光线</div>
+              <ul>
+                <li><a href="#">顺光</a></li>
+                <li><a href="#">平行光</a></li>
+                <li><a href="#">逆光</a></li>
+                ......
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> 
+
+      <div class="bd">
+        <div class="item">
+          <div class="title one"><a href="#"><i></i>摄影技巧</a></div>
+          <div class="list">
+            <a href="#"></a>
+            <a href="#">构图</a>
+            <a href="#">光线</a>
+            <a href="#">调色</a>
+          </div>
+          <div class="arrow">></div>
+          <div class="line"></div>
+          <div class="subitem">
+            <div class="inner">
+              <div class="tit tit1">
+                <div class="name">构图</div>
+                <ul>
+                  <li><a href="#">均衡式构图</a></li>
+                  <li><a href="#">对称式构图</a></li>
+                  <li><a href="#">变化式构图</a></li>
+                  <li><a href="#">对角线构图</a></li>
+                  ......
+                </ul>
+              </div>
+              <div class="tit">
+                <div class="name">光线</div>
+                <ul>
+                  <li><a href="#">顺光</a></li>
+                  <li><a href="#">平行光</a></li>
+                  <li><a href="#">逆光</a></li>
+                  ......
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div> 
+
+        <div class="bd">
+          <div class="item">
+            <div class="title one"><a href="#"><i></i>摄影技巧</a></div>
+            <div class="list">
+              <a href="#"></a>
+              <a href="#">构图</a>
+              <a href="#">光线</a>
+              <a href="#">调色</a>
+            </div>
+            <div class="arrow">></div>
+            <div class="line"></div>
+            <div class="subitem">
+              <div class="inner">
+                <div class="tit tit1">
+                  <div class="name">构图</div>
+                  <ul>
+                    <li><a href="#">均衡式构图</a></li>
+                    <li><a href="#">对称式构图</a></li>
+                    <li><a href="#">变化式构图</a></li>
+                    <li><a href="#">对角线构图</a></li>
+                    ......
+                  </ul>
+                </div>
+                <div class="tit">
+                  <div class="name">光线</div>
+                  <ul>
+                    <li><a href="#">顺光</a></li>
+                    <li><a href="#">平行光</a></li>
+                    <li><a href="#">逆光</a></li>
+                    ......
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div> 
+
+          <div class="bd">
+            <div class="item">
+              <div class="title one"><a href="#"><i></i>摄影技巧</a></div>
+              <div class="list">
+                <a href="#"></a>
+                <a href="#">构图</a>
+                <a href="#">光线</a>
+                <a href="#">调色</a>
+              </div>
+              <div class="arrow">></div>
+              <div class="line"></div>
+              <div class="subitem">
+                <div class="inner">
+                  <div class="tit tit1">
+                    <div class="name">构图</div>
+                    <ul>
+                      <li><a href="#">均衡式构图</a></li>
+                      <li><a href="#">对称式构图</a></li>
+                      <li><a href="#">变化式构图</a></li>
+                      <li><a href="#">对角线构图</a></li>
+                      ......
+                    </ul>
+                  </div>
+                  <div class="tit">
+                    <div class="name">光线</div>
+                    <ul>
+                      <li><a href="#">顺光</a></li>
+                      <li><a href="#">平行光</a></li>
+                      <li><a href="#">逆光</a></li>
+                      ......
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div> 
+  </div>
+</div>
+
+<div class="shot_contain">
     <div class="column">
       <div class="leftcolumn">
         <div class="head1">

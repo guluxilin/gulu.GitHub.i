@@ -2,58 +2,177 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <title>咕噜咕噜的摄影星球</title>
+  <link rel="stylesheet" href="./font/font2/iconfont.css">
+  <link rel="stylesheet" href="./font/font1/iconfont.css">
+  <link rel="stylesheet" href="CSS/normalize.css">
 <style>
 * {
   box-sizing: border-box;
+  margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
 }
 
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
-}
-
-/* 页眉/Blog 标题 */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-}
 /* 设置上导航栏的样式 */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* 设置 topnav 链接的样式 */
-.topnav a {
-  float: left;
+.mainbox
+{
+  width:100%;
   display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 150px;
-  text-decoration: none;
+  height:80px;
+  top:0;
 }
 
-/* 改变鼠标悬停时的颜色 */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.mainheader
+{
+   height: 42px;
+    margin-top: 19px;
+    margin-bottom: 19px;
 }
+.w
+{
+  width:1200px;
+  margin-right: auto;
+    margin-left: auto;
+}
+.logo
+{
+  float: left;
+    width: 132px;
+    height: 42px;
+}
+
+.nav
+{
+  
+    margin-left: 60px;
+}
+.nav ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+}
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+.search{
+  float: left;
+    width: 418px;
+    height: 42px;
+    margin-left: 50px;
+}
+.search input {
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+    float: left;
+}
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    border: 0;
+}
+button {
+    cursor: pointer;
+}
+.user{
+  float: right;
+    margin-right: 30px;
+}
+.user span {
+    float: right;
+    font-size: 14px;
+    line-height: 42px;
+    color: #666666;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+	position:relative;
+	z-index: 3;
+  }
+  
+  /* 设置 topnav 链接的样式 */
+  .topnav a {
+	float: left;
+	display: block;
+	width:25%;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 5%;
+	text-decoration: none;
+  }
+  
+  /* 改变鼠标悬停时的颜色 */
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
 
 /* 创建两个不相等的彼此并排的浮动列 */
 /* 左列 */
+.r{
+  width:1300px;
+  
+  margin-right: auto;
+  margin-left: auto;
+}
 .leftcolumn {   
-  float: left;
-  width: 75%;
+  display: block;
+  width: 78%;
+  height:100%;
+  float:left;
 }
 
+.row
+{
+  background-color: #f1f1f1;
+  margin-top: 10px;
+}
+.column
+{
+  width:100%;
+  padding-top:10px;
+  padding-left: 10px;
+  padding-right:10px;
+  display: block;
+}
 /* 右列 */
 .rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 40px;
+  display: block;
+  position:relative;
+  width: 20%;
+  float:right;
+  height:100%;
+  z-index: 9999;
 }
 
 /* 伪图像 */
@@ -67,16 +186,385 @@ body {
 .card {
   background-color: white;
   padding: 20px;
-  margin-top:  20px;
 }
-
+.rightcolumn .card a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    line-height: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #eaeaef;
+}
+.rightcolumn a:hover {
+background-color: #ddd;
+  color: black;
+}
 /* 清除列之后的浮动 */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
+.blog_box
+{
+  position: relative;
+    padding: 0 24px 16px;
+    background: #fff;
+}
+.article_header_box
+{
+  border-bottom: 1px solid #f5f6f7;
+    padding-top: 8px;
+    z-index: 9;
+    background-color: #fff;
+}
+.article_header_title_box
+{
+  margin-bottom: 8px;
+}
+.article_header_title
+{
+  font-size: 28px;
+    color: #222226;
+    font-weight: 600;
+    margin: 0;
+}
+.article_info_box
+{
+  position: relative;
+    background: #f8f8f8;
+    border-radius: 4px;
+}
+.article_info_top
+{
+  color: #999aaa;
+    width: 88%;
+    display: flex;
+}
+.article_info_top_name
+{
+  padding-left: 48px;
+  color: #555666;
+    margin-right: 20px;
+    padding-top: 5px;
+}
+.article_info_top_time
+{
+  position: relative;
+  margin-right: 20px;
+  padding-top: 5px;
+}
+.article_info_top_reading
+{
+  width: 24px;
+    height: 24px;
+    margin-top: 4px;
+}
+.article_info_top_readcount
+{
+  vertical-align: top;
+    margin-right: 12px;
+    line-height: 32px;
+}
+.article_info_second
+{
+  padding-left: 48px;
+    display: flex;
+}
+.article_info_second_box
+{
+  font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    margin-right: 8px;
+}
+.article_info_second_box span.label
+{
+  display: inline-block;
+    color: #999aaa;
+    padding-right: 5px;
+}
+.article_info_second_box_link
+{
+  box-sizing: border-box;
+    margin-right: 8px;
+    padding: 3px 6px;
+    font-size: 12px;
+    background-color: #fff;
+    color: #5094d5;
+    border: 1px solid #eaeaef;
+    height: 24px;
+    line-height: 17px;
+    border-radius: 2px;
+    display: inline-block;
+}
+.maincontain
+{
+  position: relative;
+    padding-top: 16px;
+    display: block;
+}
+.maincontain p
+{
+  font-size: 16px;
+    color: #4d4d4d;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0 0 16px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.maincontain h2
+{
+  color: #4f4f4f;
+    margin: 8px 0 16px;
+    font-weight: 600;
+}
+.maincontain img
+{
+  display: block;
+    margin-top:40px;
+    margin-bottom:40px;
+    margin-left:auto ;
+    margin-right:auto ;
+    width: 80%;
+    height:500px;
+    border-radius: 10px;
+}
+.comment_box
+{
+  margin-top: 10px;
+  margin-bottom: 8px;
+    padding: 16px 24px 24px 24px;
+    border-radius: 2px;
+    background: #fff;
+}
+.comment_title
+{
+  font-size: 18px;
+    font-weight: 600;
+    color: #222226;
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+.comment_title span
+{
+  margin-left: 4px;
+}
+.comment_content
+{
+  display: block;
+    width: 100%;
+    background: rgba(248,249,251,0.8);
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    resize: none;
+    height: 30px;
+    font-size: 14px;
+    line-height: 22px;
+    box-sizing: border-box;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.comment_operate_item
+{
+  position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 90%;
+    margin-top: 10px;
+}
+button, input, textarea {
+    outline: none;
+    border: 0;
+    overflow: visible;
+}
+.comment_button
+{
+  display: block;
+    width: 72px;
+    height: 32px;
+    color: #fff;
+    background: #fc5531;
+    border-radius: 16px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    border: none;
+    cursor: pointer;
+}
+.comment_list_box
+{
+  display: block;
+    padding-top: 16px;
+}
+.comment_list_box ul li
+{
+ position:relative;
+}
+.comment_list_item
+{
+  display: flex;
+    width: 100%;
+}
+.comment_list_href
+{
+  display: block;
+    padding-top: 15px;
+    height: 48px;
+}
+.comment_list_href img
+{
+  display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #e8e8ed;
+}
+.comment_list_rightbox
+{
+  border-top: 1px solid #e8e8ed;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    width: 100%;
+    margin-left: 8px;
+}
+.comment_list_top
+{
+  display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.comment_list_top_name
+{
+  display: inline-block;
+    font-weight: 500;
+    color: #222226;
+    margin-right: 4px
+} 
+.comment_list_top_like
+{
+  display: flex;
+    cursor: pointer;
+    color: #4d4d4d;
+    text-align: right;
+    height: 16px;
+    line-height: 16px;
+    margin-top: 2px;
+}
+.comment_list_top_like img
+{
+  width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+.comment_list_newcomment
+{
+  font-size: 15px;
+    color: #222226;
+    line-height: 22px;
+     word-break: break-all; 
+    margin-bottom: 4px;
+}
+.comment_list_commentback
+{
+  line-height: 20px;
+}
+.comment_list_commentback_option
+{
+  font-size: 14px;
+    color: #222226;
+    margin-right: 10px;
+}
+.comment_list_commentback_time
+{
+  font-size: 14px;
+    color: #777888;
+    margin-right: 10px;
+}
+.rankcontain
+{
+  width: 256px;
+    display: inline-block;
+    font-size: 12px;
+    background-color:#fff ;
+    border-radius: 10px;
+    margin: auto;
+  right:120px;
+  position:fixed;
+  z-index: 1;
+}
+.rank
+{
+  width: 100%;
+  padding-left:10px;
+  padding-top: 10px;
 
+}
+.rank .title
+{
+  border-bottom: 1px solid #e5e9ef;
+    min-height: 34px;
+}
+.rank .title label
+{
+  display: inline-block;
+    font-size: 18px;
+    color: #222;
+}
+.titlelist
+{
+  float: right;
+    font-size: 0;
+    height: 24px;
+    line-height: 24px;
+}
+.titlelist li
+{
+   height: 26px;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 20px;
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+.ranklist
+{
+  height:100%
+}
+.listitem
+{
+  line-height: 39px;
+    background-color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.listitem a
+{
+  color:#222;
+}
+.rankindex
+{
+  background: #f25d8e;
+  height: 18px;
+    width: 18px;
+    line-height: 18px;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    margin-right: 6px;
+}
 /* 页脚 */
 .footer {
   padding: 20px;
@@ -84,123 +572,187 @@ body {
   background: #ddd;
   margin-top: 20px;
 }
-ul {
-  background: #aaa;
-  padding: 20px;
-}
-ul li {
- 
-  margin: 5px;
-}
-div.gallery {
-  margin:10px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
 
-
-div.gallery img {
-  width:100%;
-  height: 200px;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-/* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* 响应式布局 - 当屏幕的宽度小于 400 像素时，使导航链接堆叠而不是并排 */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
 </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>详情页</h1>
-  
-</div>
+  <div class="mainbox">
+    <div class="mainheader w">
+    <div class="logo">
+      <img src="src/logo.png" style="width: 132px;height: 42px;" alt>
+    </div>
+     <div class="nav">
+      <ul>
+        <li><a href="index.html">登录</a></li>
+        <li><a href="listpage.html">列表页</a></li>
+        <li><a href="detailpage.html">详情页</a></li>
+        <li><a href="formpage.html">表单页</a></li>
+      </ul>
+    </div>
+    <div class="search">
+      <input type="text" value="输入关键词">
+      <button>
+        <i class="iconfont">&#xe62f;</i>
+      </button>
+    </div>
+    <div class="user">
+      <img src="src/user.png" style=" width:42px;height:42px; border-radius: 60px;" alt>
+      <span>咕噜咕噜</span>
+    </div>
+  </div>
+  </div>
 
 <div class="topnav">
-    <a href="homepage.html">首页</a>
-    <a href="listpage.html">电影</a>
-    <a href="listpage.html">电视剧</a>
-    <a href="listpage.html" style="float:right">搜索</a>
+    <a href="homepage.html"> 首页</a>
+  <a href="listpage.html">电影</a>
+  <a href="listpage.html">电视剧</a>
+  <a href="listpage.html" style="float:right">搜索</a>
 </div>
 
-<div class="row">
+<div class="row r">
+  <div class="column">
   <div class="leftcolumn">
-    <div class="card">
-        <h2>内容简介</h2>
-                 
-          <div class="fakeimg" style="height:100px;">
-            在“非自然死亡原因研究所”（简称“UDI”）工作的三澄美琴（石原里美饰）是专门探查死者死因的解剖医生。她最不能容忍的是对“非自然死亡”不闻不问。在她看来，“非自然”的背后必定有着需要法医来追究的真相，比如伪装杀人、医疗失误、未知的疑难疾病等等。然而，在日本，很多非自然死亡的死者都未经解剖就火化了。美琴与她那些个性鲜明的同事们一起，向这样的现实发起了挑战 [6]  。
-          </div>
-   
-          
-      </div>  
-      <div class="card">
-        <h2>影评</h2>
-        <ul>
-          <li><a href="https://movie.douban.com/subject/27140017/" style="color: #333;">豆瓣影评</a></li>
-          <li><a href="https://zhuanlan.zhihu.com/p/59234950" style="color: #333;">知乎影评</a></li>
-          <li><a href="http://www.360doc.com/content/20/0903/09/31655491_933735901.shtml" style="color: #333;">百度影评</a></li>
-        </ul>
-      </div>  
-      <div class="card">
-        <h2>影视剪辑、剧照</h2>
+    <div class="blog_box">
+      <div class="article_header_box">
+        <div class="article_header_title_box">
+          <h1 class="article_header_title">
+           常见的构图方法
+          </h1>
         </div>
-        
-      <div class="gallery">
-        <img src="src/unnatural death 1.jpeg" alt="#" >  
+        <div class="article_info_box">
+          <div class="article_info_top">
+            <a class="article_info_top_name" href="detailpage.html">
+              构图方法
+            </a>
+            <span class="article_info_top_time">2021-12-23 21:11</span>
+            <img class="article_info_top_reading" src="./src/read.jpeg">
+            <span class="article_info_top_readcount">2000</span>
+            <img class="article_info_top_reading" src="./src/save.jpeg">
+            <span class="article_info_top_readcount">2000</span>
+          </div>
+          <div class="article_info_second">
+            <div class="article_info_second_box">
+              <span class="label">分类专栏</span>
+              <a class="article_info_second_box_link" href="./detailpage.html">摄影</a>
+              <span class="label">文章标签</span>
+              <a class="article_info_second_box_link" href="./detailpage.html">光影</a>
+              <a class="article_info_second_box_link" href="./detailpage.html">构图</a>
+              <a class="article_info_second_box_link" href="./detailpage.html">人像</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="maincontain">
+        <h2>九宫格式构图法</h2>
+        <p>将被摄主体或重要景物放在“九宫格”交叉点的位置上。“井”字的四个交叉点就是主体的最佳位置。这种构图格式比较符合人们的视觉习惯，使主体成为视觉中心，画面趋向平衡。</p>
+        <img src="./src/homepage_006.jpg">
+        <h2>开放式构图</h2>
+        <p>突破了在一个固定的画幅之内完成画面造型的局限，观众对画面的审美思维从封闭式的思维向开放式画外延伸。</p>
+        <img src="./src/homepage_007.jpg">
+        <h2>对称式构图</h2>
+        <p>给人以平衡的感觉，画面结构均衡，相互呼应。具有平衡、稳定、对应的特点。</p>
+        <img src="./src/homepage_008.jpg">
+      </div>
     </div>  
-    <div class="gallery">
-      <img src="src/unnatural death 2.jpeg" alt="#" >  
-  </div>  
-  <div class="gallery">
-    <img src="src/unnatural death 3.jpeg" alt="#" >  
-</div>  
-<div class="gallery">
-  <img src="src/unnatural death 4.jpeg" alt="#" >  
-</div>  
-
-      
+    <div class="comment_box">
+      <div class="comment_title">
+        评论
+        <span>1</span>
+      </div>
+      <form>
+        <textarea class="comment_content" placeholder="说点什么吧" maxlength="1000"></textarea>
+        <div class="comment_operate_item">
+          <a href="./detailpage.html">
+            <input type="button" class="comment_button" value="评论">
+          </a>
+        </div>
+      </form>
+      <div class="comment_list_box">
+        <div class="comment_list_item">
+          <a href="./detailpage.html" class="comment_list_href">
+            <img src="./src/user.png">
+          </a>
+          <div class="comment_list_rightbox">
+            <div class="comment_list_top">
+              <span class="comment_list_top_name">
+                咕噜咕噜
+              </span>
+              <div class="comment_list_top_like">
+                <img src="./src/thumb.jpeg">
+                <span>3</span>
+              </div>
+            </div>
+            <div class="comment_list_newcomment">
+              写的真好啊啊啊啊啊啊！
+            </div>
+            <div class="comment_list_commentback">
+              <a class="comment_list_commentback_option" href="./detailpage.html">回复</a>
+              <span class="comment_list_commentback_time">9小时前</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="rightcolumn">
-    <div class="card">
-      <h2>导演</h2>
-      <div class="fakeimg" style="height:100px;">冢原亚由子</div>
-      <div class="fakeimg" style="height:100px;">竹村谦太郎</div>
-      <div class="fakeimg" style="height:100px;">村尾嘉昭</div>
+    <div class="card" >
+      <p style="text-align: center;">
+        <img src="src/user.png" style="width:100px;height:100px; ">
+      </p>
+      <p style="font-weight: 700;margin: 0;text-align: center;padding-top:20px;">咕噜咕噜</p>
+      <a href="detailpage.html">认证</a>
+      <a href="detailpage.html">简介</a>
+      <a href="detailpage.html">ta关注的人</a>
+      <a href="detailpage.html">关注ta的人</a>
+      <a href="detailpage.html">作品推荐</a>
     </div>
-    <div class="card">
-      <h3>演员1</h3>
-      <div class="fakeimg"><p>石原里美</p></div>
-     
-      <h3>演员2</h3>
-      <div class="fakeimg"><p>洼田正孝</p></div>
-      <h3>演员3</h3>
-      <div class="fakeimg"><p>井浦新</p></div>
+</div>
+<div class="rankcontain">
+  <div class="rank">
+    <div class="title">
+        <label>排行榜</label>
+        <ul class="titlelist">
+          <li>图片</li>
+          <li>视频</li>
+          <li>摄影</li>
+          <li>音乐</li>
+        </ul>
     </div>
+    <ul class="ranklist">
+      <li class="listitem">
+        <span class="rankindex">1</span>
+        <a href="detailpage.html">一些摄影技巧的小知识</a>
+      </li>
+      <li class="listitem">
+        <span class="rankindex">2</span>
+        <a href="detailpage.html">一些摄影技巧的小知识</a>
+      </li>
+      <li class="listitem">
+        <span class="rankindex">3</span>
+        <a href="detailpage.html">一些摄影技巧的小知识</a>
+      </li>
+      <li class="listitem">
+        <span class="rankindex">4</span>
+        <a href="detailpage.html">一些摄影技巧的小知识</a>
+      </li>
+      <li class="listitem">
+        <span class="rankindex">5</span>
+        <a href="detailpage.html">一些摄影技巧的小知识</a>
+      </li>
+      <li class="listitem">
+        <span class="rankindex">6</span>
+        <a href="detailpage.html">一些摄影技巧的小知识</a>
+      </li>
+    </ul>
+    
   </div>
 </div>
-
+</div>
+</div>
 <div class="footer">
   <h2>版权声明及联系方式</h2>
 </div>
 
 </body>
 </html>
-
