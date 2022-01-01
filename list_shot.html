@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=0.5,maximum-scale=1,user-scalable=no" />
   <title>咕噜咕噜的摄影星球</title>
   <link rel="stylesheet" href="./font/font2/iconfont.css">
   <link rel="stylesheet" href="./font/font1/iconfont.css">
-  <link rel="stylesheet" href="./CSS/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="./jquery/jquery3/css/style.css">
   <script src="./jquery/jquery3/js/jquery-1.11.0.min.js"></script>
 <style>
@@ -72,7 +72,6 @@ html {
 .nav ul li a {
     display: block;
     height: 42px;
-    padding: 0 10px;
     line-height: 42px;
     font-size: 18px;
     color: #050505;
@@ -385,14 +384,15 @@ button {
 <div class="mainbox">
   <div class="mainheader w">
   <div class="logo">
-    <img src="src/logo.png" style="width: 132px;height: 42px;" alt>
+    <img src="img/logo.png" style="width: 132px;height: 42px;" alt>
   </div>
    <div class="nav">
     <ul>
       <li><a href="index.html">登录</a></li>
-      <li><a href="listpage.html">列表页</a></li>
-      <li><a href="detailpage.html">详情页</a></li>
-      <li><a href="formpage.html">表单页</a></li>
+      <li><a href="list_img.html">列表页</a></li>
+      <li><a href="show.html">详情页</a></li>
+      <li><a href="form.html">表单页</a></li>
+      <li><a href="edit.html">排行榜</a></li>
     </ul>
   </div>
   <div class="search">
@@ -402,7 +402,7 @@ button {
     </button>
   </div>
   <div class="user">
-    <img src="src/user.png" style=" width:52px;height:52px;" alt>
+    <img src="img/user.png" style=" width:52px;height:52px;" alt>
     <span>咕噜咕噜</span>
   </div>
 </div>
@@ -410,10 +410,10 @@ button {
 
   
 <div class="topnav">
-    <a href="homepage.html"> 首页</a>
-  <a href="listpage.html">视频</a>
-  <a href="listpage.html">摄影</a>
-  <a href="listpage.html" style="float:right">音乐</a>
+    <a href="home.html"> 首页</a>
+  <a href="list_img.html">视频</a>
+  <a href="list_img.html">摄影</a>
+  <a href="list_img.html" style="float:right">音乐</a>
 </div>
 
 <div class="leftsidebox">
@@ -421,7 +421,12 @@ button {
   <div class="hd">摄影专栏分类</div>
   <div class="bd">
     <div class="item">
-      <div class="title one"><a href="#"><i></i>摄影技巧</a></div>
+      <div class="title five">
+        <a href="#" >
+          <i></i>
+          摄影技巧
+        </a>
+      </div>
       <div class="list">
         <a href="#"></a>
         <a href="#">构图</a>
@@ -495,7 +500,7 @@ button {
 
       <div class="bd">
         <div class="item">
-          <div class="title one"><a href="#"><i></i>摄影技巧</a></div>
+          <div class="title two"><a href="#"><i></i>摄影技巧</a></div>
           <div class="list">
             <a href="#"></a>
             <a href="#">构图</a>
@@ -532,7 +537,7 @@ button {
 
         <div class="bd">
           <div class="item">
-            <div class="title one"><a href="#"><i></i>摄影技巧</a></div>
+            <div class="title three"><a href="#"><i></i>摄影技巧</a></div>
             <div class="list">
               <a href="#"></a>
               <a href="#">构图</a>
@@ -569,7 +574,7 @@ button {
 
           <div class="bd">
             <div class="item">
-              <div class="title one"><a href="#"><i></i>摄影技巧</a></div>
+              <div class="title four"><a href="#"><i></i>摄影技巧</a></div>
               <div class="list">
                 <a href="#"></a>
                 <a href="#">构图</a>
@@ -615,7 +620,7 @@ button {
         <div class="articlecontain">
           <div class="articleholder">
             <div class="articlemain">
-              <a href="detailpage.html" class="articlemaintitle">
+              <a href="show.html" class="articlemaintitle">
                 <span class="listtitle">构图方法与摄影技巧</span>
               </a>
               <div class="articlemaindetail">
@@ -624,7 +629,7 @@ button {
               <div class="information">
               <div class="writer">
                 <span class="writerhead">
-                  <img src="./src/user.png">
+                  <img src="img/user.png">
                 </span>
               </div>
                 <span class="writername">
@@ -649,7 +654,7 @@ button {
           <div class="articlecontain">
             <div class="articleholder">
               <div class="articlemain">
-                <a href="detailpage.html" class="articlemaintitle">
+                <a href="show.html" class="articlemaintitle">
                   <span class="listtitle">构图方法与摄影技巧</span>
                 </a>
                 <div class="articlemaindetail">
@@ -658,7 +663,7 @@ button {
                 <div class="information">
                 <div class="writer">
                   <span class="writerhead">
-                    <img src="./src/user.png">
+                    <img src="img/user.png">
                   </span>
                 </div>
                   <span class="writername">
@@ -683,7 +688,7 @@ button {
             <div class="articlecontain">
               <div class="articleholder">
                 <div class="articlemain">
-                  <a href="detailpage.html" class="articlemaintitle">
+                  <a href="show.html" class="articlemaintitle">
                     <span class="listtitle">构图方法与摄影技巧</span>
                   </a>
                   <div class="articlemaindetail">
@@ -692,7 +697,7 @@ button {
                   <div class="information">
                   <div class="writer">
                     <span class="writerhead">
-                      <img src="./src/user.png">
+                      <img src="img/user.png">
                     </span>
                   </div>
                     <span class="writername">
@@ -717,7 +722,7 @@ button {
               <div class="articlecontain">
                 <div class="articleholder">
                   <div class="articlemain">
-                    <a href="detailpage.html" class="articlemaintitle">
+                    <a href="show.html" class="articlemaintitle">
                       <span class="listtitle">构图方法与摄影技巧</span>
                     </a>
                     <div class="articlemaindetail">
@@ -726,7 +731,7 @@ button {
                     <div class="information">
                     <div class="writer">
                       <span class="writerhead">
-                        <img src="./src/user.png">
+                        <img src="img/user.png">
                       </span>
                     </div>
                       <span class="writername">
@@ -751,7 +756,7 @@ button {
                 <div class="articlecontain">
                   <div class="articleholder">
                     <div class="articlemain">
-                      <a href="detailpage.html" class="articlemaintitle">
+                      <a href="show.html" class="articlemaintitle">
                         <span class="listtitle">构图方法与摄影技巧</span>
                       </a>
                       <div class="articlemaindetail">
@@ -760,10 +765,10 @@ button {
                       <div class="information">
                       <div class="writer">
                         <span class="writerhead">
-                          <img src="./src/user.png">
+                          <img src="./img/user.png">
                         </span>
                       </div>
-                        <span class="writername">
+                        <span class="writername" >
                           咕噜咕噜
                         </span>
                       <span class="classify">
@@ -785,7 +790,7 @@ button {
                   <div class="articlecontain">
                     <div class="articleholder">
                       <div class="articlemain">
-                        <a href="detailpage.html" class="articlemaintitle">
+                        <a href="show.html" class="articlemaintitle">
                           <span class="listtitle">构图方法与摄影技巧</span>
                         </a>
                         <div class="articlemaindetail">
@@ -794,7 +799,7 @@ button {
                         <div class="information">
                         <div class="writer">
                           <span class="writerhead">
-                            <img src="./src/user.png">
+                            <img src="img/user.png">
                           </span>
                         </div>
                           <span class="writername">
@@ -832,27 +837,27 @@ button {
           <ul class="ranklist">
             <li class="listitem">
               <span class="rankindex">1</span>
-              <a href="detailpage.html">一些摄影技巧的小知识</a>
+              <a href="show.html">一些摄影技巧的小知识</a>
             </li>
             <li class="listitem">
               <span class="rankindex">2</span>
-              <a href="detailpage.html">一些摄影技巧的小知识</a>
+              <a href="show.html">一些摄影技巧的小知识</a>
             </li>
             <li class="listitem">
               <span class="rankindex">3</span>
-              <a href="detailpage.html">一些摄影技巧的小知识</a>
+              <a href="show.html">一些摄影技巧的小知识</a>
             </li>
             <li class="listitem">
               <span class="rankindex">4</span>
-              <a href="detailpage.html">一些摄影技巧的小知识</a>
+              <a href="show.html">一些摄影技巧的小知识</a>
             </li>
             <li class="listitem">
               <span class="rankindex">5</span>
-              <a href="detailpage.html">一些摄影技巧的小知识</a>
+              <a href="show.html">一些摄影技巧的小知识</a>
             </li>
             <li class="listitem">
               <span class="rankindex">6</span>
-              <a href="detailpage.html">一些摄影技巧的小知识</a>
+              <a href="show.html">一些摄影技巧的小知识</a>
             </li>
           </ul>
           
@@ -862,11 +867,6 @@ button {
     </div>
 </div>
 
-
-
- 
-
-    
 
 
 <div class="footer">

@@ -30,15 +30,15 @@ body{font-family:'Microsoft YaHei',Arial, Lucida Grande, Lucida Sans Unicode, Ve
 .product_sort .bd .item{border-bottom:solid 1px #3299fd;height:60px;position:relative;}
 .product_sort .bd .item .title{width:226px;text-indent:43px;height:30px;overflow:hidden;line-height:42px;font-size:14px;font-weight:bold;color:#292929;}
 .product_sort .bd .item .title a{color:#222;position:relative;}
-.product_sort .bd .item .title a i{position:absolute;}
-.product_sort .bd .item .one a i{width:19px;height:19px;background-position:0 0;left:-25px;top:-3px;}
-.product_sort .bd .item .two a i{width:22px;height:20px;background-position:0 -51px;left:-28px;top:-5px;}
-.product_sort .bd .item .three a i{width:31px;height:23px;background-position:0 -101px;left:-34px;top:-7px;}
-.product_sort .bd .item .four a i{width:25px;height:17px;background-position:0 -156px;left:-29px;top:-3px;}
-.product_sort .bd .item .five a i{width:28px;height:17px;background-position:0 -207px;left:-33px;top:-1px;}
-.product_sort .bd .item .six a i{width:28px;height:17px;background-position:0 -259px;left:-32px;top:-3px;}
-.product_sort .bd .item .seven a i{width:26px;height:20px;background-position:0 -309px;left:-31px;top:-6px;}
-.product_sort .bd .item .eight a i{width:26px;height:21px;background-position:0 -360px;left:-32px;top:-7px;}
+.product_sort .bd .item .title a i{position:absolute;background:url(../images/css_sprites.png) no-repeat;}
+.product_sort .bd .item .one a i{width:28px;height:30px;background-position: -10px -65px;left:-34px;top:-3px;}
+.product_sort .bd .item .two a i{width:28px;height:30px;background-position: -60px -65px;left:-34px;top:-5px;}
+.product_sort .bd .item .three a i{width:30px;height:30px;background-position:-115px -10px;left:-34px;top:-7px;}
+.product_sort .bd .item .four a i{width:30px;height:30px;background-position: -10px -115px;left:-29px;top:-3px;}
+.product_sort .bd .item .five a i{width:28px;height:17px;background-position:  -115px -60px;left:-33px;top:-1px;}
+.product_sort .bd .item .six a i{width:30px;height:31px;background-position:   -65px -10px;left:-32px;top:-3px;}
+.product_sort .bd .item .seven a i{width:35px;height:35px;background-position: -10px -10px;left:-31px;top:-6px;}
+.product_sort .bd .item .eight a i{width:35px;height:35px;background-position: -10px -10px;left:-32px;top:-7px;}
 .product_sort .bd .item .list{width:210px;padding-left:15px;height:30px;line-height:30px;overflow:hidden;}
 .product_sort .bd .item .list a{font-family:"Microsoft YaHei",Arial,sans-serif;color:#333;}
 .product_sort .bd .item .list a:hover{text-decoration:underline;}

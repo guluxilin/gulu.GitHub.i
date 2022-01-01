@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=0.5,maximum-scale=1,user-scalable=no" />
   <title>咕噜咕噜的摄影星球</title>
   <link rel="stylesheet" href="./font/font2/iconfont.css">
   <link rel="stylesheet" href="./font/font1/iconfont.css">
-  <link rel="stylesheet" href="./CSS/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="./jquery/jquery2/css/default.css">
   <script src="./jquery/jquery2/js/jquery-1.11.0.min.js"></script>
   <script src="./jquery/jquery2/js/jquery.toTop.min.js"></script>
@@ -74,7 +74,6 @@ html {
 .nav ul li a {
     display: block;
     height: 42px;
-    padding: 0 10px;
     line-height: 42px;
     font-size: 18px;
     color: #050505;
@@ -233,7 +232,6 @@ button {
   background: #ddd;
   margin-top: 20px;
 }
-
 </style>
 </head>
 <body>
@@ -252,14 +250,15 @@ button {
   <div class="mainbox">
     <div class="mainheader w">
     <div class="logo">
-      <img src="src/logo.png" style="width: 132px;height: 42px;" alt>
+      <img src="img/logo.png" style="width: 132px;height: 42px;" alt>
     </div>
      <div class="nav">
       <ul>
         <li><a href="index.html">登录</a></li>
-        <li><a href="listpage.html">列表页</a></li>
-        <li><a href="detailpage.html">详情页</a></li>
-        <li><a href="formpage.html">表单页</a></li>
+        <li><a href="list_img.html">列表页</a></li>
+        <li><a href="show.html">详情页</a></li>
+        <li><a href="form.html">表单页</a></li>
+        <li><a href="edit.html">排行榜</a></li>
       </ul>
     </div>
     <div class="search">
@@ -269,17 +268,17 @@ button {
       </button>
     </div>
     <div class="user">
-      <img src="src/user.png" style=" width:52px;height:52px;" alt>
+      <img src="img/user.png" style=" width:52px;height:52px;" alt>
       <span>咕噜咕噜</span>
     </div>
   </div>
   </div>
 
 <div class="topnav">
-    <a href="homepage.html"> 首页</a>
-  <a href="listpage.html">视频</a>
-  <a href="listpage.html">摄影</a>
-  <a href="listpage.html" style="float:right">音乐</a>
+    <a href="home.html"> 首页</a>
+  <a href="list_img.html">视频</a>
+  <a href="./list_shot.html">摄影</a>
+  <a href="./list_shot.html" style="float:right">音乐</a>
 </div>
 
 <div class="box000">
@@ -291,13 +290,13 @@ button {
     <div class="box001" style="height:250px">
         <div class="box003" style="margin:auto">
           <div class="box004" style="display:inline-flex;">
-            <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_001.jpg) ;">
+            <a href="show.html" class="picture" style="background-image:url(img/listpage_001.jpg) ;">
               <span>桌面壁纸</span>
             </a>
-            <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_002.jpg) ;">
+            <a href="show.html" class="picture" style="background-image:url(img/listpage_002.jpg) ;">
               <span>手机壁纸</span>
             </a>
-            <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_003.jpg) ;">
+            <a href="show.html" class="picture" style="background-image:url(img/listpage_003.jpg) ;">
               <span>动漫壁纸</span>
             </a>
           </div>
@@ -315,13 +314,13 @@ button {
       <div class="box001" style="height:250px">
           <div class="box003" style="margin:auto">
             <div class="box004" style="display:inline-flex;">
-              <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_004.jpg) ;">
+              <a href="show.html" class="picture" style="background-image:url(img/listpage_004.jpg) ;">
                 <span>星空</span>
               </a>
-              <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_005.jpg) ;">
+              <a href="show.html" class="picture" style="background-image:url(img/listpage_005.jpg) ;">
                 <span>山川</span>
               </a>
-              <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_006.jpg) ;">
+              <a href="show.html" class="picture" style="background-image:url(img/listpage_006.jpg) ;">
                 <span>海洋</span>
               </a>
             </div>
@@ -339,13 +338,13 @@ button {
         <div class="box001" style="height:250px">
             <div class="box003" style="margin:auto">
               <div class="box004" style="display:inline-flex;">
-                <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_007.jpg) ;">
+                <a href="show.html" class="picture" style="background-image:url(img/listpage_007.jpg) ;">
                   <span>艺术</span>
                 </a>
-                <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_008.jpg) ;">
+                <a href="show.html" class="picture" style="background-image:url(img/listpage_008.jpg) ;">
                   <span>建筑</span>
                 </a>
-                <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_009.jpg) ;">
+                <a href="show.html" class="picture" style="background-image:url(img/listpage_009.jpg) ;">
                   <span>节日</span>
                 </a>
               </div>
@@ -363,13 +362,13 @@ button {
           <div class="box001" style="height:250px">
               <div class="box003" style="margin:auto">
                 <div class="box004" style="display:inline-flex;">
-                  <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_010.jpg) ;">
+                  <a href="show.html" class="picture" style="background-image:url(img/listpage_010.jpg) ;">
                     <span>儿童</span>
                   </a>
-                  <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_011.jpg) ;">
+                  <a href="show.html" class="picture" style="background-image:url(img/listpage_011.jpg) ;">
                     <span>成人</span>
                   </a>
-                  <a href="detailpage.html" class="picture" style="background-image:url(src/listpage_012.jpg) ;">
+                  <a href="show.html" class="picture" style="background-image:url(img/listpage_012.jpg) ;">
                     <span>动物</span>
                   </a>
                 </div>

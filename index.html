@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=0.5,maximum-scale=1,user-scalable=no" />
     <title>登录</title>
-    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
 <style>
 body {
     width: 100%;
     height: 100%;
     font-family: 'Open Sans',sans-serif;
     margin: 0;
-    background: url(./src/background.jpeg) no-repeat;
+    background: url(img/background.jpeg) no-repeat;
     background-size: 1920px auto;
 }
 input[type=text], select {
@@ -100,73 +100,25 @@ a {
 
     <div class="login_logo">
         <h1>Login</h1>
-  <form name="myForm" action="homepage.html" onsubmit="return validateForm()" method="post">
+  <form name="myForm" action="home.html" onsubmit="return validateForm_index()" method="post">
     <label for="name">用户名</label>
     <input type="text" id="name"placeholder="用户名" >
     <label for="password">密码</label>
     <input type="text" id="password"  placeholder="密码" >
-    <label for="place">身份</label>
-    <select id="identity" name="identity" onchange="testClk()">
+    <label >身份</label>
+    <select id="identity" name="identity" onchange="testClk_index()">
       <option value="user">用户</option>
       <option value="manager">管理员</option>
     </select>
     <div id="org"></div>
-    <a class="link" href="homepage.html" onclick="javascript:checkCookie(document.getElementById('name').value);return validateForm()">登录</a>
+    <a class="link" href="./home.html" onclick="javascript:checkCookie(document.getElementById('name').value);return validateForm_index()">登录</a>
+    <a class="link" href="./form.html">注册</a>
   </form>
 </div>
 
-<script> 
-  function testClk(){ 
-    var obj = document.getElementById("org"); 
-    var sel = document.getElementById("identity"); 
-    if (sel.value == "manager") { 
-      var input1 = document.createElement('input');
-       input1.setAttribute('type', 'text');
-        input1.setAttribute('name', 'countrywrite'); 
-        obj.insertBefore(input1,null);
-      } }
-   </script> 
+<script type="text/javascript" src="./js/testClk_index.js"></script>
+    <script type="text/javascript" src="./js/validateForm_index.js"></script>
+<script type="text/javascript" src="./js/cookie.js"></script>
 
-<script>
-  function validateForm(){
-  var x=document.forms["myForm"]["name"].value;
-    if (x==null || x==""){
-    alert("输入不得为空");
-    return false;
-    }
-  }
-  </script>
-
-
- <script>
-    function setCookie(cname,cvalue,exdays){
-        var d = new Date();
-        d.setTime(d.getTime()+(exdays*24*60*60*1000));
-        var expires = "expires="+d.toGMTString();
-        document.cookie = cname+"="+cvalue+"; "+expires;
-    }
-    function getCookie(cname){
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0; i<ca.length; i++) {
-            var c = ca[i].trim();
-            if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
-        }
-        return "";
-    }
-    function checkCookie(cname){
-    setCookie("username",cname,30);
-	var user=getCookie("username");
-	if (user!=""){
-		alert("欢迎 " + user + "登录");
-	}
-	else {
-		user = prompt("请输入你的用户名:","");
-  		if (user!="" && user!=null){
-    		setCookie("username",user,30);
-    	}
-	}
-}
-    </script>
 </body>
 </html>

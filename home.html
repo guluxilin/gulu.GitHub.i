@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=0.5,maximum-scale=1,user-scalable=no" />
 <title>咕噜咕噜的摄影星球</title>
 <link rel="stylesheet" href="./font/font2/iconfont.css">
 <link rel="stylesheet" href="./font/font1/iconfont.css">
-<link rel="stylesheet" href="./CSS/normalize.css">
+<link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="./jquery/jquery1/css/jquery.plusgallery.css">
 <script src="./jquery/jquery1/js/jquery-1.11.0.min.js"></script>
 <script src="./jquery/jquery1/js/jquery.plusGallery.js"></script>
@@ -15,7 +15,9 @@
   box-sizing: border-box;
   margin: 0;
     padding: 0;
+  font-family: sans-serif,monospace,serif, cursive, fantasy;
 }
+
 a {
     text-decoration: none;
 }
@@ -72,7 +74,6 @@ html {
 .nav ul li a {
     display: block;
     height: 42px;
-    padding: 0 10px;
     line-height: 42px;
     font-size: 18px;
     color: #050505;
@@ -132,7 +133,7 @@ div.fixed {
     border: 0;
 background:rgba(0,0,0,0)
 }
-div.box2
+.box2
 {
   margin-top: 30px;
   display: flex;
@@ -141,18 +142,18 @@ div.box2
   flex-direction: row;
   flex-wrap: wrap;
 }
-div.gallery {
+.gallery {
   margin: 1.5%;
   border: 1px solid #ccc;
   float: left;
   width: 20%;
 }
 
-div.gallery:hover {
+.gallery:hover {
   border: 1px solid #777;
 }
 
-div.gallery img {
+.gallery img {
   width: 100%;
   height: 200px;
 }
@@ -244,6 +245,50 @@ div.font1
   background: #f6f9fa;
   margin-top: 40px;
 }
+@media screen and (max-width:626px)
+{
+  .contentbox
+  {
+    width:100%;
+  }
+}
+@media screen and (min-width:576px)
+{
+  .gallery
+  {
+    width:80%;
+    height:auto;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .gallery
+  {
+    width:60%;
+    height:auto;
+  }
+}
+
+
+@media (min-width: 992px) {
+
+  .gallery
+  {
+    width:40%;
+    height:auto;
+  }
+}
+
+
+@media (min-width: 1200px) {
+
+  .gallery
+  {
+    width:20%;
+    height:auto;
+  }
+}
 
 </style>
 </head>
@@ -251,14 +296,15 @@ div.font1
   <div class="mainbox">
     <div class="mainheader w">
     <div class="logo">
-      <img src="src/logo.png" style="width: 132px;height: 42px;" alt>
+      <img src="img/logo.png" style="width: 132px;height: 42px;" alt>
     </div>
      <div class="nav">
       <ul>
         <li><a href="index.html">登录</a></li>
-        <li><a href="listpage.html">列表页</a></li>
-        <li><a href="detailpage.html">详情页</a></li>
-        <li><a href="formpage.html">表单页</a></li>
+        <li><a href="list_img.html">列表页</a></li>
+        <li><a href="show.html">详情页</a></li>
+        <li><a href="form.html">表单页</a></li>
+        <li><a href="edit.html">排行榜</a></li>
       </ul>
     </div>
     <div class="search">
@@ -268,7 +314,7 @@ div.font1
       </button>
     </div>
     <div class="user">
-      <img src="src/user.png" style=" width:52px;height:52px;" alt>
+      <img src="img/user.png" style=" width:52px;height:52px;" alt>
       <span>咕噜咕噜</span>
     </div>
   </div>
@@ -276,31 +322,31 @@ div.font1
 
   <div class="myplusgallery w" style="position: relative;">
     <div class="topnav">
-      <a href="listpage.html">图片</a>
-      <a href="listpage.html">视频</a>
-      <a href="listpage_shot.html">摄影</a>
-      <a href="listpage.html" >音乐</a>
+      <a href="./list_img.html">图片</a>
+      <a href="./list_img.html">视频</a>
+      <a href="./list_shot.html">摄影</a>
+      <a href="./list_img.html" >音乐</a>
     </div>
     <div class="img-prev" title="Previous Image">‹</div>
     <div class="img-next" title="Next Image">›</div>
     <div class="img-slide">
       <figure>
-        <img src="src/homepage_001.jpg" alt="Image Alt" />
+        <img src="img/homepage_001.jpg" alt="Image Alt" />
       </figure>
       <figure>
-        <img src="src/homepage_002.jpg" alt="Image Alt" />
+        <img src="img/homepage_002.jpg" alt="Image Alt" />
       </figure>
       <figure>
-        <img src="src/homepage_003.jpg" alt="Image Alt" />
+        <img src="img/homepage_003.jpg" alt="Image Alt" />
       </figure>
       <figure>
-        <img src="src/homepage_004.jpg" alt="Image Alt" />
+        <img src="img/homepage_004.jpg" alt="Image Alt" />
       </figure>
       <figure>
-        <img src="src/homepage_005.jpg" alt="Image Alt" />
+        <img src="img/homepage_005.jpg" alt="Image Alt" />
       </figure>
       <figure>
-        <img src="src/homepage_006.jpg" alt="Image Alt" />
+        <img src="img/homepage_006.jpg" alt="Image Alt" />
       </figure> 
     </div>
     <script>$('.myplusgallery').plusGallery();</script>
@@ -318,8 +364,8 @@ div.font1
       <div class="detail1"></div>
 <div class="maincontent r">
   <div class="contentbox">
-<a class="content" style="width:100%;height:320px" href="listpage.html">
-  <img src="src/homepage_007.jpg" style="width:626px;height:320px;"alt>
+<a class="content" href="list_img.html">
+  <img src="img/homepage_007.jpg">
   <div class="introduction">
     <h2 class="font">图片</h2>
   </div>
@@ -327,8 +373,8 @@ div.font1
 </div>
 
 <div class="contentbox">
-  <a class="content" style="width:100%;height:320px" href="listpage.html">
-    <img src="src/homepage_008.jpg" style="width:626px;height:320px;"alt>
+  <a class="content"  href="list_img.html">
+    <img src="img/homepage_008.jpg">
     <div class="introduction">
       <h2 class="font">视频</h2>
     </div>
@@ -336,8 +382,8 @@ div.font1
   </div>
 
   <div class="contentbox">
-    <a class="content" style="width:100%;height:320px" href="listpage.html">
-      <img src="src/homepage_009.jpg" style="width:626px;height:320px;"alt>
+    <a class="content" href="./list_shot.html">
+      <img src="img/homepage_009.jpg" >
       <div class="introduction">
         <h2 class="font">摄影</h2>
       </div>
@@ -345,8 +391,8 @@ div.font1
     </div>
 
     <div class="contentbox">
-      <a class="content" style="width:100%;height:320px" href="listpage.html">
-        <img src="src/homepage_010.jpg" style="width:626px;height:320px;"alt>
+      <a class="content" href="./list_shot.html">
+        <img src="img/homepage_010.jpg">
         <div class="introduction">
           <h2 class="font">音乐</h2>
         </div>
@@ -359,28 +405,28 @@ div.font1
     <div class="detail1"></div>
    <div class="box2">
       <div class="gallery">
-      <a target="_blank" href="formpage.html">
-        <img src="src/link1.jpg" alt="Cinque Terre" width="600" height="400">
+      <a target="_blank" href="form.html">
+        <img src="img/link1.jpg" alt="Cinque Terre" >
       </a>
       <div class="desc">图片专栏</div>
       </div>
       <div class="gallery">
-        <a target="_blank" href="formpage.html">
-          <img src="src/link5.jpg" alt="Forest" width="600" height="400">
+        <a target="_blank" href="form.html">
+          <img src="img/link5.jpg" alt="Forest" >
         </a>
         <div class="desc">视频专栏</div>
       </div>
 
       <div class="gallery">
-        <a target="_blank" href="formpage.html">
-          <img src="src/link3.jpg" alt="Northern Lights" width="600" height="400">
+        <a target="_blank" href="form.html">
+          <img src="img/link3.jpg" alt="Northern Lights" >
         </a>
         <div class="desc">摄影专栏</div>
       </div>
 
       <div class="gallery">
-    <a target="_blank" href="formpage.html">
-      <img src="src/link4.jpg" alt="Mountains" width="600" height="400">
+    <a target="_blank" href="form.html">
+      <img src="img/link4.jpg" alt="Mountains">
     </a>
     <div class="desc">音乐专栏</div>
     </div> 

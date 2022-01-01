@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" ;name="viewport" ;http-equiv="Content-Type" ;content="text/html width=device-width,initial-scale=1,minimum-scale=0.5,maximum-scale=1,user-scalable=no" />
   <title>咕噜咕噜的摄影星球</title>
   <link rel="stylesheet" href="./font/font2/iconfont.css">
   <link rel="stylesheet" href="./font/font1/iconfont.css">
-  <link rel="stylesheet" href="CSS/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
 <style>
 * {
   box-sizing: border-box;
@@ -499,9 +499,10 @@ button, input, textarea {
     background-color:#fff ;
     border-radius: 10px;
     margin: auto;
-  right:120px;
+  right:150px;
   position:fixed;
   z-index: 1;
+
 }
 .rank
 {
@@ -519,7 +520,6 @@ button, input, textarea {
 {
   display: inline-block;
     font-size: 18px;
-    color: #222;
 }
 .titlelist
 {
@@ -580,14 +580,14 @@ button, input, textarea {
   <div class="mainbox">
     <div class="mainheader w">
     <div class="logo">
-      <img src="src/logo.png" style="width: 132px;height: 42px;" alt>
+      <img src="img/logo.png" style="width: 132px;height: 42px;" alt>
     </div>
      <div class="nav">
       <ul>
         <li><a href="index.html">登录</a></li>
-        <li><a href="listpage.html">列表页</a></li>
-        <li><a href="detailpage.html">详情页</a></li>
-        <li><a href="formpage.html">表单页</a></li>
+        <li><a href="list_img.html">列表页</a></li>
+        <li><a href="show.html">详情页</a></li>
+        <li><a href="form.html">表单页</a></li>
       </ul>
     </div>
     <div class="search">
@@ -597,17 +597,17 @@ button, input, textarea {
       </button>
     </div>
     <div class="user">
-      <img src="src/user.png" style=" width:42px;height:42px; border-radius: 60px;" alt>
+      <img src="img/user.png" style=" width:42px;height:42px; border-radius: 60px;" alt>
       <span>咕噜咕噜</span>
     </div>
   </div>
   </div>
 
 <div class="topnav">
-    <a href="homepage.html"> 首页</a>
-  <a href="listpage.html">电影</a>
-  <a href="listpage.html">电视剧</a>
-  <a href="listpage.html" style="float:right">搜索</a>
+    <a href="home.html"> 首页</a>
+  <a href="list_img.html">电影</a>
+  <a href="list_img.html">电视剧</a>
+  <a href="list_img.html" style="float:right">搜索</a>
 </div>
 
 <div class="row r">
@@ -622,23 +622,23 @@ button, input, textarea {
         </div>
         <div class="article_info_box">
           <div class="article_info_top">
-            <a class="article_info_top_name" href="detailpage.html">
+            <a class="article_info_top_name" href="show.html">
               构图方法
             </a>
             <span class="article_info_top_time">2021-12-23 21:11</span>
-            <img class="article_info_top_reading" src="./src/read.jpeg">
+            <img class="article_info_top_reading" src="img/read.jpeg">
             <span class="article_info_top_readcount">2000</span>
-            <img class="article_info_top_reading" src="./src/save.jpeg">
+            <img class="article_info_top_reading" src="img/save.jpeg">
             <span class="article_info_top_readcount">2000</span>
           </div>
           <div class="article_info_second">
             <div class="article_info_second_box">
               <span class="label">分类专栏</span>
-              <a class="article_info_second_box_link" href="./detailpage.html">摄影</a>
+              <a class="article_info_second_box_link" href="./show.html">摄影</a>
               <span class="label">文章标签</span>
-              <a class="article_info_second_box_link" href="./detailpage.html">光影</a>
-              <a class="article_info_second_box_link" href="./detailpage.html">构图</a>
-              <a class="article_info_second_box_link" href="./detailpage.html">人像</a>
+              <a class="article_info_second_box_link" href="./show.html">光影</a>
+              <a class="article_info_second_box_link" href="./show.html">构图</a>
+              <a class="article_info_second_box_link" href="./show.html">人像</a>
             </div>
           </div>
         </div>
@@ -646,13 +646,13 @@ button, input, textarea {
       <div class="maincontain">
         <h2>九宫格式构图法</h2>
         <p>将被摄主体或重要景物放在“九宫格”交叉点的位置上。“井”字的四个交叉点就是主体的最佳位置。这种构图格式比较符合人们的视觉习惯，使主体成为视觉中心，画面趋向平衡。</p>
-        <img src="./src/homepage_006.jpg">
+        <img src="img/homepage_006.jpg">
         <h2>开放式构图</h2>
         <p>突破了在一个固定的画幅之内完成画面造型的局限，观众对画面的审美思维从封闭式的思维向开放式画外延伸。</p>
-        <img src="./src/homepage_007.jpg">
+        <img src="img/homepage_007.jpg">
         <h2>对称式构图</h2>
         <p>给人以平衡的感觉，画面结构均衡，相互呼应。具有平衡、稳定、对应的特点。</p>
-        <img src="./src/homepage_008.jpg">
+        <img src="img/homepage_008.jpg">
       </div>
     </div>  
     <div class="comment_box">
@@ -663,15 +663,15 @@ button, input, textarea {
       <form>
         <textarea class="comment_content" placeholder="说点什么吧" maxlength="1000"></textarea>
         <div class="comment_operate_item">
-          <a href="./detailpage.html">
+          <a href="./show.html">
             <input type="button" class="comment_button" value="评论">
           </a>
         </div>
       </form>
       <div class="comment_list_box">
         <div class="comment_list_item">
-          <a href="./detailpage.html" class="comment_list_href">
-            <img src="./src/user.png">
+          <a href="./show.html" class="comment_list_href">
+            <img src="img/user.png">
           </a>
           <div class="comment_list_rightbox">
             <div class="comment_list_top">
@@ -679,7 +679,7 @@ button, input, textarea {
                 咕噜咕噜
               </span>
               <div class="comment_list_top_like">
-                <img src="./src/thumb.jpeg">
+                <img src="img/thumb.jpeg">
                 <span>3</span>
               </div>
             </div>
@@ -687,7 +687,7 @@ button, input, textarea {
               写的真好啊啊啊啊啊啊！
             </div>
             <div class="comment_list_commentback">
-              <a class="comment_list_commentback_option" href="./detailpage.html">回复</a>
+              <a class="comment_list_commentback_option" href="./show.html">回复</a>
               <span class="comment_list_commentback_time">9小时前</span>
             </div>
           </div>
@@ -698,14 +698,14 @@ button, input, textarea {
   <div class="rightcolumn">
     <div class="card" >
       <p style="text-align: center;">
-        <img src="src/user.png" style="width:100px;height:100px; ">
+        <img src="img/user.png" style="width:100px;height:100px; " id="user_img">
       </p>
-      <p style="font-weight: 700;margin: 0;text-align: center;padding-top:20px;">咕噜咕噜</p>
-      <a href="detailpage.html">认证</a>
-      <a href="detailpage.html">简介</a>
-      <a href="detailpage.html">ta关注的人</a>
-      <a href="detailpage.html">关注ta的人</a>
-      <a href="detailpage.html">作品推荐</a>
+      <p style="font-weight: 700;margin: 0;text-align: center;padding-top:20px;" id="user_name">咕噜咕噜</p>
+      <a href="#/user">认证</a>
+      <a href="#/user1">简介</a>
+      <a href="#/user2">ta关注的人</a>
+      <a href="#/user3">关注ta的人</a>
+      <a href="#/user">作品推荐</a>
     </div>
 </div>
 <div class="rankcontain">
@@ -722,27 +722,27 @@ button, input, textarea {
     <ul class="ranklist">
       <li class="listitem">
         <span class="rankindex">1</span>
-        <a href="detailpage.html">一些摄影技巧的小知识</a>
+        <a href="show.html">一些摄影技巧的小知识</a>
       </li>
       <li class="listitem">
         <span class="rankindex">2</span>
-        <a href="detailpage.html">一些摄影技巧的小知识</a>
+        <a href="show.html">一些摄影技巧的小知识</a>
       </li>
       <li class="listitem">
         <span class="rankindex">3</span>
-        <a href="detailpage.html">一些摄影技巧的小知识</a>
+        <a href="show.html">一些摄影技巧的小知识</a>
       </li>
       <li class="listitem">
         <span class="rankindex">4</span>
-        <a href="detailpage.html">一些摄影技巧的小知识</a>
+        <a href="show.html">一些摄影技巧的小知识</a>
       </li>
       <li class="listitem">
         <span class="rankindex">5</span>
-        <a href="detailpage.html">一些摄影技巧的小知识</a>
+        <a href="show.html">一些摄影技巧的小知识</a>
       </li>
       <li class="listitem">
         <span class="rankindex">6</span>
-        <a href="detailpage.html">一些摄影技巧的小知识</a>
+        <a href="show.html">一些摄影技巧的小知识</a>
       </li>
     </ul>
     
@@ -750,9 +750,16 @@ button, input, textarea {
 </div>
 </div>
 </div>
+
+
+  <input type="button" value="按钮" id="btn" />
+  <ul id="ul1"></ul>
+
+
 <div class="footer">
   <h2>版权声明及联系方式</h2>
 </div>
-
+  <script type="text/javascript" src="./js/hash.js"></script>
+<script type="text/javascript" src="./js/ajax.js"></script>
 </body>
 </html>

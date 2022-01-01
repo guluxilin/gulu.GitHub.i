@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=0.5,maximum-scale=1,user-scalable=no" />
     <title>注册</title>
-    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
 <style>
   body {
     width: 100%;
     height: 100%;
     font-family: 'Open Sans',sans-serif;
     margin: 0;
-    background: url(./src/background.jpeg) no-repeat;
+    background: url(img/background.jpeg) no-repeat;
     background-size: 1920px auto;
+    font-size:20px;
 }
 input[type=text],select {
   width: 100%;
@@ -150,41 +151,41 @@ a {
 <h1 >注册</h1>
 <div class="wholebox">
   <div class="contain">
-  <form name="myForm" action="./detailpage.html" onsubmit="return validateForm()" method="post">
+  <form name="myForm" action="./home.html" onsubmit=" return validateForm()" method="post">
     <div class="gap">
     <div class="box">
-    <label for="user">用户名：</label>
+    <label >用户名：</label>
     </div>
     <input type="text" id="user"  placeholder="用户...." >
   </div>
 
   <div class="gap">
     <div class="box">
-    <label for="password">密码：</label>
+    <label >密码：</label>
   </div>
     <input type="password" id="password"  placeholder="密码不少于6位...." >
     </div>
 
     <div class="gap">
   <div class="box">
-    <laber for="sex">性别</laber>
+    <laber >性别</laber>
   </div>
     <input type="radio" name="sex"  id="man1" value="1" />
-      <label for="man1">男</label>
+      <label style="font-size:1rem ">男</label>
       <input type="radio" name="sex" id="man2" value="0" />
-      <label for="man2">女</label>
+      <label style="font-size:1rem ">女</label>
       </div>
 
       <div class="gap">
       <div class="box">
-      <label for="oeder">使用期望：</label>
+      <label >使用期望：</label>
       </div>
       <input id="a1" type="checkbox" name="love" value="a" />
-      <label for="a1">获取素材</label>
+      <label style="font-size:1rem ">获取素材</label>
       <input id="b1" type="checkbox" name="love2" value="b" />
-      <label for="b1">学习摄影</label>
+      <label style="font-size:1rem ">学习摄影</label>
       <input id="c1" type="checkbox"  name="love3" value="c"/>
-      <label for="c1">寻找共同爱好者</label>
+      <label style="font-size:1rem ">寻找共同爱好者</label>
       </div>
 
       <div class="gap">
@@ -196,55 +197,28 @@ a {
       <option value="Novice">入门新手</option>
       <option value="Senior">资深爱好者</option>
       <option value="Photographer">摄影师</option>
+      <option value="other">其他</option>
     </select>
     <div id="org"></div> 
   </div>
 
   <div class="gap">
     <div class="box">
-    <label for="summarize">个人主页介绍:</label>
+    <label >个人主页介绍:</label>
   </div>
       <textarea placeholder="巴拉巴拉...."></textarea>
     </div>
 
       <input type="reset" value="重置" />
-    <input type="submit" value="注册" name='submit' id="submit">
+    <input type="submit" value="注册" name='submit' id="submit" >
   </form>
 </div>
 </div>
 </div>
 
+<script type="text/javascript" src="./js/validateForm.js"></script>
+  <script type="text/javascript" src="./js/testClk.js"></script>
 
-<script> 
-  function testClk(){ 
-    var obj = document.getElementById("org"); 
-    var sel = document.getElementById("country"); 
-    if (sel.value == "other") { 
-      var input1 = document.createElement('input');
-       input1.setAttribute('type', 'text');
-        input1.setAttribute('name', 'countrywrite'); 
-        obj.insertBefore(input1,null);
-      } }
-   </script> 
-
-<script>
-  function validateForm(){
-  var x=document.forms["myForm"]["name"].value;
-  var matches = x.match(/\d+/g);
-if (matches != null) {
-    alert('输入含有数字');
-    return false;
-}
-  if (x=="中学圣日记"){
-    alert("已有该影视剧");
-    return false;
-    }
-    if (x==null || x==""){
-    alert("影视名称输入不得为空");
-    return false;
-    }
-  }
-  </script>
  
 </body>
 </html>
