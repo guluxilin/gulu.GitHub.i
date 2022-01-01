@@ -1,3 +1,47 @@
+
+
+
+function getPosts(){
+    let posts = []
+    for ( var i = 0, len = localStorage.length; i < len; ++i ) {
+        let post  = localStorage.getItem( localStorage.key( i ) )
+        posts[i] = JSON.parse(post)
+                //创建一行
+                var trObj = document.createElement("tr");
+                //追加到tbody中
+                zy$("tbd").appendChild(trObj);
+                //修改ID值
+                //创建列
+                //第一列
+                var td1 = document.createElement("td");
+                trObj.appendChild(td1);
+                td1.innerHTML = posts[i].name;
+                //第二列
+                var td2 = document.createElement("td");
+                trObj.appendChild(td2);
+                td2.innerHTML = posts[i].subject;
+                //第三列
+                var td3 = document.createElement("td");
+                trObj.appendChild(td3);
+                td3.innerHTML = posts[i].score;
+                //第四列
+                var td4 = document.createElement("td");
+                trObj.appendChild(td4);
+                //创建a标签
+                var aObj = document.createElement("a");
+                td4.appendChild(aObj);
+                //a的跳转地址
+                aObj.href = "javascript:void(0)";
+                aObj.innerText = "删除";
+                //点击删除
+                aObj.onclick = function () {
+                    this.parentNode.parentNode.parentNode.
+                    removeChild(this.parentNode.parentNode);
+                };
+    }
+}
+
+
 function zy$(id) {
     return document.getElementById(id)
 };
@@ -17,6 +61,14 @@ var arr = [{
         "score": "73"
     }
 ];
+function get_last_key(){
+    let max = -1;
+    for ( var i = 0, len = localStorage.length; i < len; ++i ) {
+        key = parseInt(localStorage.key( i ))
+        if(key > max){max = key}
+    }
+    return max + 1
+}
 //注册点击事件，生成现有表格
 zy$("btn").onclick = function () {
     //tbody中的内容只出现一次
@@ -95,6 +147,12 @@ zy$("btn2").onclick = function () {
         td1.innerText = input1.value;
         td2.innerText = input2.value;
         td3.innerText = input3.value;
+        post = {};
+        post["name"]=input1.value;
+        post["subject"]=input2.value;
+        post["score"]=input3.value;
+        var i_id = get_last_key();
+        localStorage.setItem(i_id,JSON.stringify((post)));
         //点击确定之后，第四列会发生变化
         //删除现有第四列
         this.parentNode.parentNode.removeChild(this.parentNode);

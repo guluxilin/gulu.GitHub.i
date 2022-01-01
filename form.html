@@ -126,19 +126,22 @@ h1 {
 }
 .link
 {
-  display: block;
-  color:white;
-  background-color: #4CAF50;
-  padding: 14px 20px;
-  margin: 8px 0;
+  width: 15%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-shadow: 0 0 10px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 25px 45px;
+  margin-left: 20%;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  text-align: center;
+  font-size:15px;
 }
 .link:hover
 {
-    background-color: #45a049;
+  background-color: rgba(0, 0, 0, 1);
 }
 a {
     text-decoration: none;
@@ -151,7 +154,7 @@ a {
 <h1 >注册</h1>
 <div class="wholebox">
   <div class="contain">
-  <form name="myForm" action="./home.html" onsubmit=" return validateForm()" method="post">
+  <form name="myForm" action="./home.html"  method="post">
     <div class="gap">
     <div class="box">
     <label >用户名：</label>
@@ -210,7 +213,7 @@ a {
     </div>
 
       <input type="reset" value="重置" />
-    <input type="submit" value="注册" name='submit' id="submit" >
+    <a class="link" href="./home.html" onclick=" return validateForm()">注册</a>
   </form>
 </div>
 </div>
